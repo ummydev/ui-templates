@@ -18,12 +18,12 @@ This is a running app template. Rename it to [your product], replace the sample 
 
 ## First templates
 
-The first templates. The running app is ready; the others are in progress:
+The first templates. The running and food ordering apps are ready; the others are in progress:
 
 | Template | Type | Design system |
 | --- | --- | --- |
 | [Running and fitness tracker](apps/running) (available) | Mobile app, 8 screens | [Stride](https://codexdesign.io/design-systems/stride) |
-| Food ordering | Mobile app | [Pantry](https://codexdesign.io/design-systems/pantry) |
+| [Food ordering and delivery](apps/food-ordering) (available) | Mobile app, 8 screens | [Pantry](https://codexdesign.io/design-systems/pantry) |
 | Budgeting | Mobile app | [Wallet](https://codexdesign.io/design-systems/wallet) |
 | Meditation and journaling | Mobile app | [Calm](https://codexdesign.io/design-systems/calm) |
 | SaaS landing page | Website | [Nordic](https://codexdesign.io/design-systems/nordic) |
