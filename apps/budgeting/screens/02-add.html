@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add a transaction · Wallet</title>
+  <!-- Wallet design system: colours, fonts and radius. Add class="dark" to <html> for the dark theme. -->
+  <link rel="stylesheet" href="../tokens.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  <style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
+    @theme inline {
+      --color-background: var(--background);
+      --color-foreground: var(--foreground);
+      --color-card: var(--card);
+      --color-card-foreground: var(--card-foreground);
+      --color-popover: var(--popover);
+      --color-popover-foreground: var(--popover-foreground);
+      --color-primary: var(--primary);
+      --color-primary-foreground: var(--primary-foreground);
+      --color-secondary: var(--secondary);
+      --color-secondary-foreground: var(--secondary-foreground);
+      --color-muted: var(--muted);
+      --color-muted-foreground: var(--muted-foreground);
+      --color-accent: var(--accent);
+      --color-accent-foreground: var(--accent-foreground);
+      --color-destructive: var(--destructive);
+      --color-border: var(--border);
+      --color-input: var(--input);
+      --color-ring: var(--ring);
+      --color-chart-1: var(--chart-1);
+      --color-chart-2: var(--chart-2);
+      --color-chart-3: var(--chart-3);
+      --color-chart-4: var(--chart-4);
+      --color-chart-5: var(--chart-5);
+      --font-sans: var(--font-sans);
+      --font-heading: var(--font-heading);
+      --radius-sm: calc(var(--radius) - 8px);
+      --radius-md: calc(var(--radius) - 6px);
+      --radius-lg: var(--radius);
+      --spacing-touch: var(--touch);
+      --spacing-screen: var(--screen-padding);
+      --spacing-tab-bar: var(--tab-bar);
+      /* Soft and low, on cards and the add button. */
+      --shadow-card: 0 1px 2px oklch(0.2 0.02 160 / 0.06), 0 4px 14px -6px oklch(0.2 0.02 160 / 0.12);
+      --shadow-float: 0 8px 20px -6px oklch(0.45 0.1 165 / 0.45);
+    }
+    @layer base {
+      body { @apply bg-background font-sans font-medium text-foreground antialiased; }
+    }
+  </style>
+</head>
+<body>
+  <main class="relative mx-auto flex h-[844px] w-[390px] flex-col overflow-hidden bg-background">
+    <div class="flex h-12 shrink-0 items-center justify-between px-8 pt-2 text-[15px] font-semibold">
+      <span class="tabular-nums">9:41</span>
+      <span class="flex items-center gap-1.5" aria-hidden="true">
+        <svg class="h-3 w-[18px]" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+        <svg class="h-3 w-4" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.2-1.3A10.4 10.4 0 0 0 8 .5 10.4 10.4 0 0 0 .8 3.3L2 4.6a8.6 8.6 0 0 1 6-2.4Zm0 3.6c1.3 0 2.5.5 3.4 1.3l1.2-1.3A6.6 6.6 0 0 0 8 4a6.6 6.6 0 0 0-4.6 1.8l1.2 1.3c.9-.8 2.1-1.3 3.4-1.3Zm0 3.5c.5 0 .9.2 1.2.5L8 11.2 6.8 9.8c.3-.3.7-.5 1.2-.5Z"/></svg>
+        <svg class="h-3 w-[26px]" viewBox="0 0 26 12" fill="none"><rect x=".5" y=".5" width="22" height="11" rx="3" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="16" height="8" rx="1.8" fill="currentColor"/><path d="M24 4v4a2 2 0 0 0 0-4Z" fill="currentColor" opacity=".4"/></svg>
+      </span>
+    </div>
+    <header class="flex shrink-0 items-center justify-between px-2 pb-1">
+      <a href="01-overview.html" class="flex size-touch items-center justify-center rounded-full" aria-label="Close"><svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></a>
+      <div class="flex rounded-full bg-muted p-1 text-[15px] font-semibold" role="radiogroup" aria-label="Type">
+        <span role="radio" aria-checked="true" class="rounded-full bg-card px-5 py-2 shadow-card">Expense</span>
+        <span role="radio" aria-checked="false" class="px-5 py-2 text-muted-foreground">Income</span>
+      </div>
+      <span class="size-touch"></span>
+    </header>
+    <div class="flex shrink-0 flex-col items-center py-3">
+      <p class="text-[48px] leading-none font-bold tracking-[-0.02em] tabular-nums">−$24.50<span class="ml-0.5 inline-block h-11 w-0.5 translate-y-1 animate-pulse bg-primary align-baseline"></span></p>
+      <p class="mt-2 text-[13px] text-muted-foreground">Groceries budget: $137.52 left, $113.02 after this</p>
+    </div>
+    <div class="flex flex-1 flex-col gap-3 overflow-hidden px-screen">
+      <ul class="grid grid-cols-4 gap-2" aria-label="Category">
+        <li><button class="flex w-full flex-col items-center gap-1 rounded-md py-2 text-[12px] font-semibold bg-secondary text-secondary-foreground ring-2 ring-primary" aria-pressed="true"><span class="flex size-9 shrink-0 items-center justify-center rounded-full bg-chart-1/12 text-chart-1"><svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2.05 2.05 1.099-.028a1 1 0 0 1 1.008.815l2.69 14.347A1 1 0 0 0 7.83 18H18"/><path d="M4.563 5h16.435a1 1 0 0 1 .981 1.204l-1.026 6.226A2 2 0 0 1 18.962 14H6.25"/><circle cx="18" cy="20" r="2"/><circle cx="8" cy="20" r="2"/></svg></span>Groceries</button></li>
+        <li><button class="flex w-full flex-col items-center gap-1 rounded-md py-2 text-[12px] font-semibold text-muted-foreground"><span class="flex size-9 shrink-0 items-center justify-center rounded-full bg-chart-4/12 text-chart-4"><svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></span>Dining</button></li>
+        <li><button class="flex w-full flex-col items-center gap-1 rounded-md py-2 text-[12px] font-semibold text-muted-foreground"><span class="flex size-9 shrink-0 items-center justify-center rounded-full bg-chart-2/12 text-chart-2"><svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3.1V7a4 4 0 0 0 8 0V3.1"/><path d="m9 15-1-1"/><path d="m15 15 1-1"/><path d="M9 19c-2.8 0-5-2.2-5-5v-4a8 8 0 0 1 16 0v4c0 2.8-2.2 5-5 5Z"/><path d="m8 19-2 3"/><path d="m16 19 2 3"/></svg></span>Transport</button></li>
+        <li><button class="flex w-full flex-col items-center gap-1 rounded-md py-2 text-[12px] font-semibold text-muted-foreground"><span class="flex size-9 shrink-0 items-center justify-center rounded-full bg-chart-3/12 text-chart-3"><svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 10a4 4 0 0 1-8 0"/><path d="M3.103 6.034h17.794"/><path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"/></svg></span>Shopping</button></li>
+        <li><button class="flex w-full flex-col items-center gap-1 rounded-md py-2 text-[12px] font-semibold text-muted-foreground"><span class="flex size-9 shrink-0 items-center justify-center rounded-full bg-chart-5/12 text-chart-5"><svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg></span>Utilities</button></li>
+        <li><button class="flex w-full flex-col items-center gap-1 rounded-md py-2 text-[12px] font-semibold text-muted-foreground"><span class="flex size-9 shrink-0 items-center justify-center rounded-full bg-chart-4/12 text-chart-4"><svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/><path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg></span>Health</button></li>
+        <li><button class="flex w-full flex-col items-center gap-1 rounded-md py-2 text-[12px] font-semibold text-muted-foreground"><span class="flex size-9 shrink-0 items-center justify-center rounded-full bg-chart-5/12 text-chart-5"><svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg></span>Subscriptions</button></li>
+        <li><button class="flex w-full flex-col items-center gap-1 rounded-md py-2 text-[12px] font-semibold text-muted-foreground"><span class="flex size-9 shrink-0 items-center justify-center rounded-full bg-chart-2/12 text-chart-2"><svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>Rent</button></li>
+      </ul>
+      <dl class="grid grid-cols-3 divide-x divide-border rounded-lg bg-card text-[13px] shadow-card">
+        <div class="flex min-h-touch flex-col justify-center px-3 py-2"><dt class="text-muted-foreground">Account</dt><dd class="font-semibold">Checking</dd></div>
+        <div class="flex min-h-touch flex-col justify-center px-3 py-2"><dt class="text-muted-foreground">Date</dt><dd class="font-semibold">Today, Nov 18</dd></div>
+        <div class="flex min-h-touch flex-col justify-center px-3 py-2"><dt class="text-muted-foreground">Note</dt><dd class="truncate font-semibold">Farmers market</dd></div>
+      </dl>
+      <div class="grid grid-cols-3 gap-1.5" aria-label="Keypad">
+        <button class="flex h-[52px] items-center justify-center rounded-md text-[24px] font-semibold tabular-nums bg-card">1</button>
+        <button class="flex h-[52px] items-center justify-center rounded-md text-[24px] font-semibold tabular-nums bg-card">2</button>
+        <button class="flex h-[52px] items-center justify-center rounded-md text-[24px] font-semibold tabular-nums bg-card">3</button>
+        <button class="flex h-[52px] items-center justify-center rounded-md text-[24px] font-semibold tabular-nums bg-card">4</button>
+        <button class="flex h-[52px] items-center justify-center rounded-md text-[24px] font-semibold tabular-nums bg-card">5</button>
+        <button class="flex h-[52px] items-center justify-center rounded-md text-[24px] font-semibold tabular-nums bg-card">6</button>
+        <button class="flex h-[52px] items-center justify-center rounded-md text-[24px] font-semibold tabular-nums bg-card">7</button>
+        <button class="flex h-[52px] items-center justify-center rounded-md text-[24px] font-semibold tabular-nums bg-card">8</button>
+        <button class="flex h-[52px] items-center justify-center rounded-md text-[24px] font-semibold tabular-nums bg-card">9</button>
+        <button class="flex h-[52px] items-center justify-center rounded-md text-[24px] font-semibold tabular-nums bg-card">.</button>
+        <button class="flex h-[52px] items-center justify-center rounded-md text-[24px] font-semibold tabular-nums bg-card">0</button>
+        <button class="flex h-[52px] items-center justify-center rounded-md text-[24px] font-semibold tabular-nums text-muted-foreground" aria-label="Delete"><svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5a2 2 0 0 0-1.344.519l-6.328 5.74a1 1 0 0 0 0 1.481l6.328 5.741A2 2 0 0 0 10 19h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2z"/><path d="m12 9 6 6"/><path d="m18 9-6 6"/></svg></button>
+      </div>
+    </div>
+    <div class="shrink-0 px-screen pt-3">
+      <a href="03-transactions.html" class="flex h-14 items-center justify-center gap-2 rounded-full bg-primary text-[17px] font-bold text-primary-foreground"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Save expense</a>
+      <div class="flex h-[34px] shrink-0 items-end justify-center pb-2" aria-hidden="true"><span class="h-[5px] w-[134px] rounded-full bg-foreground/80"></span></div>
+    </div>
+  </main>
+</body>
+</html>
