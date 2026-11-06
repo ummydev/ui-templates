@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home · Pantry</title>
+  <!-- Pantry design system: colours, fonts and radius. Add class="dark" to <html> for the dark theme. -->
+  <link rel="stylesheet" href="../tokens.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  <style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
+    @theme inline {
+      --color-background: var(--background);
+      --color-foreground: var(--foreground);
+      --color-card: var(--card);
+      --color-card-foreground: var(--card-foreground);
+      --color-popover: var(--popover);
+      --color-popover-foreground: var(--popover-foreground);
+      --color-primary: var(--primary);
+      --color-primary-foreground: var(--primary-foreground);
+      --color-secondary: var(--secondary);
+      --color-secondary-foreground: var(--secondary-foreground);
+      --color-muted: var(--muted);
+      --color-muted-foreground: var(--muted-foreground);
+      --color-accent: var(--accent);
+      --color-accent-foreground: var(--accent-foreground);
+      --color-destructive: var(--destructive);
+      --color-border: var(--border);
+      --color-input: var(--input);
+      --color-ring: var(--ring);
+      --color-chart-1: var(--chart-1);
+      --color-chart-2: var(--chart-2);
+      --color-chart-3: var(--chart-3);
+      --color-chart-4: var(--chart-4);
+      --color-chart-5: var(--chart-5);
+      --font-sans: var(--font-sans);
+      --font-heading: var(--font-heading);
+      --radius-sm: calc(var(--radius) - 8px);
+      --radius-md: calc(var(--radius) - 6px);
+      --radius-lg: var(--radius);
+      --spacing-touch: var(--touch);
+      --spacing-screen: var(--screen-padding);
+      --spacing-tab-bar: var(--tab-bar);
+      /* Soft and low, for floating elements only: the cart bar and buttons over images. */
+      --shadow-float: 0 8px 24px -10px oklch(0.236 0.03 47.408 / 0.35);
+    }
+    @layer base {
+      body { @apply bg-background font-sans text-foreground antialiased; }
+    }
+  </style>
+</head>
+<body>
+  <main class="relative mx-auto flex h-[844px] w-[390px] flex-col overflow-hidden bg-background">
+    <div class="flex h-12 shrink-0 items-center justify-between px-8 pt-2 text-[15px] font-semibold">
+      <span class="tabular-nums">9:41</span>
+      <span class="flex items-center gap-1.5" aria-hidden="true">
+        <svg class="h-3 w-[18px]" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+        <svg class="h-3 w-4" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.2-1.3A10.4 10.4 0 0 0 8 .5 10.4 10.4 0 0 0 .8 3.3L2 4.6a8.6 8.6 0 0 1 6-2.4Zm0 3.6c1.3 0 2.5.5 3.4 1.3l1.2-1.3A6.6 6.6 0 0 0 8 4a6.6 6.6 0 0 0-4.6 1.8l1.2 1.3c.9-.8 2.1-1.3 3.4-1.3Zm0 3.5c.5 0 .9.2 1.2.5L8 11.2 6.8 9.8c.3-.3.7-.5 1.2-.5Z"/></svg>
+        <svg class="h-3 w-[26px]" viewBox="0 0 26 12" fill="none"><rect x=".5" y=".5" width="22" height="11" rx="3" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="16" height="8" rx="1.8" fill="currentColor"/><path d="M24 4v4a2 2 0 0 0 0-4Z" fill="currentColor" opacity=".4"/></svg>
+      </span>
+    </div>
+    <header class="flex shrink-0 items-center gap-3 px-screen pb-3">
+      <a href="05-checkout.html" class="flex flex-1 items-center gap-2">
+        <span class="flex size-10 items-center justify-center rounded-full bg-secondary text-secondary-foreground"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <span>
+          <span class="block text-[13px] text-muted-foreground">Deliver to</span>
+          <span class="flex items-center gap-1 text-[15px] font-semibold">214 Bedford Ave <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+        </span>
+      </a>
+      <button class="relative flex size-touch items-center justify-center rounded-full bg-card" aria-label="Notifications"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg><span class="absolute top-3 right-3 size-2 rounded-full bg-primary"></span></button>
+    </header>
+    <div class="flex flex-1 flex-col gap-5 overflow-hidden">
+      <label class="mx-screen flex h-touch shrink-0 items-center gap-3 rounded-full border border-input bg-card px-4 text-muted-foreground">
+        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        <input class="flex-1 bg-transparent text-[16px] text-foreground outline-none placeholder:text-muted-foreground" placeholder="Search dishes or restaurants">
+        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg>
+      </label>
+      <ul class="flex shrink-0 gap-3 overflow-hidden px-screen" aria-label="Categories">
+        <li><a href="#" class="flex w-[60px] flex-col items-center gap-1.5 text-[13px] font-semibold"><span class="flex size-[60px] items-center justify-center rounded-full bg-primary/15 ring-2 ring-primary"><img src="../assets/food/pizza-pepperoni.svg" alt="" class="size-11"></span>Pizza</a></li>
+        <li><a href="#" class="flex w-[60px] flex-col items-center gap-1.5 text-[13px] text-muted-foreground"><span class="flex size-[60px] items-center justify-center rounded-full bg-card"><img src="../assets/food/sushi.svg" alt="" class="size-11"></span>Sushi</a></li>
+        <li><a href="#" class="flex w-[60px] flex-col items-center gap-1.5 text-[13px] text-muted-foreground"><span class="flex size-[60px] items-center justify-center rounded-full bg-card"><img src="../assets/food/salad-bowl.svg" alt="" class="size-11"></span>Salads</a></li>
+        <li><a href="#" class="flex w-[60px] flex-col items-center gap-1.5 text-[13px] text-muted-foreground"><span class="flex size-[60px] items-center justify-center rounded-full bg-card"><img src="../assets/food/ramen.svg" alt="" class="size-11"></span>Ramen</a></li>
+        <li><a href="#" class="flex w-[60px] flex-col items-center gap-1.5 text-[13px] text-muted-foreground"><span class="flex size-[60px] items-center justify-center rounded-full bg-card"><img src="../assets/food/tacos.svg" alt="" class="size-11"></span>Tacos</a></li>
+        <li><a href="#" class="flex w-[60px] flex-col items-center gap-1.5 text-[13px] text-muted-foreground"><span class="flex size-[60px] items-center justify-center rounded-full bg-card"><img src="../assets/food/berry-tart.svg" alt="" class="size-11"></span>Desserts</a></li>
+      </ul>
+      <a href="#" class="mx-screen flex shrink-0 items-center gap-3 rounded-lg bg-chart-3/20 px-4 py-3">
+        <span class="flex size-10 items-center justify-center rounded-full bg-chart-3 text-[#2A1A12]"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 1 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 1 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M9 9h.01"/><path d="m15 9-6 6"/><path d="M15 15h.01"/></svg></span>
+        <span class="flex-1">
+          <span class="block text-[15px] font-semibold">Free delivery on 3 orders</span>
+          <span class="block text-[13px] text-muted-foreground">Code FIRST3 is added at checkout</span>
+        </span>
+        <svg class="size-5 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
+      <section class="px-screen" aria-labelledby="near">
+        <div class="mb-3 flex items-baseline justify-between">
+          <h2 id="near" class="font-heading text-[22px] font-bold">Near you</h2>
+          <a href="#" class="text-[15px] font-semibold text-primary">See all</a>
+        </div>
+        <ul class="flex flex-col gap-4">
+          <li>
+            <a href="02-restaurant.html" class="block">
+              <span class="relative flex h-[150px] items-center justify-center overflow-hidden rounded-lg bg-secondary">
+                <img src="../assets/food/pizza-pepperoni.svg" alt="" class="size-[180px] translate-y-6">
+                <span class="absolute top-3 left-3 rounded-full bg-card px-3 py-1 text-[13px] font-semibold">25–35 min</span>
+                <span class="absolute top-2 right-2 flex size-touch items-center justify-center rounded-full" aria-hidden="true"><span class="flex size-9 items-center justify-center rounded-full bg-card"><svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg></span></span>
+              </span>
+              <span class="mt-2.5 flex items-start justify-between gap-3">
+                <span>
+                  <span class="block font-heading text-[18px] leading-tight font-bold">Luca's Wood-Fired Pizza</span>
+                  <span class="mt-0.5 block text-[13px] text-muted-foreground">Pizza · Italian <span class="text-muted-foreground" aria-hidden="true">·</span> $1.99 delivery</span>
+                </span>
+                <span class="text-[15px]"><span class="inline-flex items-center gap-1 font-semibold"><svg class="size-4 fill-chart-3 text-chart-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><span class="tabular-nums">4.8</span><span class="font-normal text-muted-foreground">(1.2k)</span></span></span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="block">
+              <span class="relative flex h-[150px] items-center justify-center overflow-hidden rounded-lg bg-chart-2/15">
+                <img src="../assets/food/sushi.svg" alt="" class="size-[180px] translate-y-6">
+                <span class="absolute top-3 left-3 rounded-full bg-card px-3 py-1 text-[13px] font-semibold">30–40 min</span>
+                <span class="absolute top-2 right-2 flex size-touch items-center justify-center rounded-full" aria-hidden="true"><span class="flex size-9 items-center justify-center rounded-full bg-card"><svg class="size-[18px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"/></svg></span></span>
+              </span>
+              <span class="mt-2.5 flex items-start justify-between gap-3">
+                <span>
+                  <span class="block font-heading text-[18px] leading-tight font-bold">Kumo Sushi</span>
+                  <span class="mt-0.5 block text-[13px] text-muted-foreground">Sushi · Japanese <span class="text-muted-foreground" aria-hidden="true">·</span> Free delivery</span>
+                </span>
+                <span class="text-[15px]"><span class="inline-flex items-center gap-1 font-semibold"><svg class="size-4 fill-chart-3 text-chart-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg><span class="tabular-nums">4.9</span><span class="font-normal text-muted-foreground">(860)</span></span></span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <nav class="shrink-0 border-t border-border bg-card" aria-label="Main">
+      <ul class="grid h-tab-bar grid-cols-4">
+        <li><a href="01-home.html" class="flex h-full flex-col items-center justify-center gap-1 text-[11px] font-semibold text-primary" aria-current="page"><span class="relative"><svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>Home</a></li>
+        <li><a href="01-home.html" class="flex h-full flex-col items-center justify-center gap-1 text-[11px] font-semibold text-muted-foreground"><span class="relative"><svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></span>Search</a></li>
+        <li><a href="07-orders.html" class="flex h-full flex-col items-center justify-center gap-1 text-[11px] font-semibold text-muted-foreground"><span class="relative"><svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 16H8"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"/></svg><span class="absolute -top-1 -right-2 flex size-4 items-center justify-center rounded-full bg-primary text-[10px] text-primary-foreground tabular-nums">1</span></span>Orders</a></li>
+        <li><a href="08-account.html" class="flex h-full flex-col items-center justify-center gap-1 text-[11px] font-semibold text-muted-foreground"><span class="relative"><svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>Account</a></li>
+      </ul>
+      <div class="flex h-[34px] shrink-0 items-end justify-center pb-2" aria-hidden="true"><span class="h-[5px] w-[134px] rounded-full bg-foreground/80"></span></div>
+    </nav>
+  </main>
+</body>
+</html>
