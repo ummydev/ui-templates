@@ -2,7 +2,7 @@
 
 Free website and mobile app templates with full source code, made to be cloned and changed by AI agents such as Codex and Claude Code. Each template is a complete product design, not just a theme: every screen the product needs, built on one of the free [DESIGN.md design systems](https://github.com/ummydev/design-md).
 
-## How it will work
+## How it works
 
 Each template lives in its own folder with screenshots, a README and the source. Clone just the one you want:
 
@@ -18,11 +18,11 @@ This is a running app template. Rename it to [your product], replace the sample 
 
 ## First templates
 
-The first templates are in progress:
+The first templates. The running app is ready; the others are in progress:
 
 | Template | Type | Design system |
 | --- | --- | --- |
-| Running and fitness tracker | Mobile app | [Stride](https://codexdesign.io/design-systems/stride) |
+| [Running and fitness tracker](apps/running) (available) | Mobile app, 8 screens | [Stride](https://codexdesign.io/design-systems/stride) |
 | Food ordering | Mobile app | [Pantry](https://codexdesign.io/design-systems/pantry) |
 | Budgeting | Mobile app | [Wallet](https://codexdesign.io/design-systems/wallet) |
 | Meditation and journaling | Mobile app | [Calm](https://codexdesign.io/design-systems/calm) |
