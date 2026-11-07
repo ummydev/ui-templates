@@ -18,7 +18,7 @@ This is a running app template. Rename it to [your product], replace the sample 
 
 ## First templates
 
-The first templates. The running, food ordering, budgeting and meditation apps are ready; the others are in progress:
+The first templates. The running, food ordering, budgeting and meditation apps and the SaaS website are ready; the SaaS dashboard is in progress:
 
 | Template | Type | Design system |
 | --- | --- | --- |
@@ -26,7 +26,7 @@ The first templates. The running, food ordering, budgeting and meditation apps a
 | [Food ordering and delivery](apps/food-ordering) (available) | Mobile app, 8 screens | [Pantry](https://codexdesign.io/design-systems/pantry) |
 | [Budgeting and expense tracking](apps/budgeting) (available) | Mobile app, 8 screens | [Wallet](https://codexdesign.io/design-systems/wallet) |
 | [Meditation and sleep](apps/meditation) (available) | Mobile app, 8 screens | [Calm](https://codexdesign.io/design-systems/calm) |
-| SaaS landing page | Website | [Nordic](https://codexdesign.io/design-systems/nordic) |
+| [SaaS website](sites/saas) (available) | Website, 8 pages | [Nordic](https://codexdesign.io/design-systems/nordic) |
 | SaaS dashboard | Web app | [Ledger](https://codexdesign.io/design-systems/ledger) |
 
 Watch or star the repository to hear when they land.
