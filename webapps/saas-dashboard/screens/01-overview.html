@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overview · Tallywise</title>
+  <!-- Ledger design system: colours, fonts and radius. Dark is the default; remove class="dark" above for light. -->
+  <link rel="stylesheet" href="../tokens.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  <style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
+    @theme inline {
+      --color-background: var(--background);
+      --color-foreground: var(--foreground);
+      --color-card: var(--card);
+      --color-card-foreground: var(--card-foreground);
+      --color-popover: var(--popover);
+      --color-popover-foreground: var(--popover-foreground);
+      --color-primary: var(--primary);
+      --color-primary-foreground: var(--primary-foreground);
+      --color-secondary: var(--secondary);
+      --color-secondary-foreground: var(--secondary-foreground);
+      --color-muted: var(--muted);
+      --color-muted-foreground: var(--muted-foreground);
+      --color-accent: var(--accent);
+      --color-accent-foreground: var(--accent-foreground);
+      --color-destructive: var(--destructive);
+      --color-border: var(--border);
+      --color-input: var(--input);
+      --color-ring: var(--ring);
+      --color-chart-1: var(--chart-1);
+      --color-chart-2: var(--chart-2);
+      --color-chart-3: var(--chart-3);
+      --color-chart-4: var(--chart-4);
+      --color-chart-5: var(--chart-5);
+      --font-sans: var(--font-sans);
+      --font-mono: var(--font-mono);
+      --radius-sm: calc(var(--radius) - 2px);
+      --radius-md: var(--radius);
+      --radius-lg: calc(var(--radius) + 2px);
+      --spacing-touch: var(--touch);
+    }
+    @layer base {
+      body { @apply bg-background font-sans text-[14px] text-foreground antialiased; }
+    }
+  </style>
+</head>
+<body>
+  <div class="flex min-h-screen">
+    <aside class="hidden w-[232px] shrink-0 flex-col border-r border-border bg-card lg:flex">
+      <div class="flex h-14 items-center gap-2 border-b border-border px-4">
+        <svg class="size-6 text-primary" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="currentColor"/><path d="M6 17V12M10 17V8M14 17V11M18 17V6" stroke="var(--primary-foreground)" stroke-width="2.2" stroke-linecap="round"/></svg><span class="text-[15px] font-semibold">Tallywise</span>
+      </div>
+      <button class="mx-3 mt-3 flex h-10 items-center gap-2 rounded-md border border-border px-3 text-left text-[13px] outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+        <span class="flex size-5 items-center justify-center rounded-sm bg-chart-2/20 font-mono text-[11px] text-chart-2">B</span>
+        <span class="flex-1 truncate">Brightline Forms</span><svg class="size-4 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <nav class="mt-4 px-3" aria-label="Main">
+        <ul class="flex flex-col gap-0.5 text-[14px]">
+          <li><a href="01-overview.html" class="flex h-9 items-center gap-2.5 rounded-md px-2.5 bg-accent font-semibold text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-current="page"><svg class="size-4 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>Overview</a></li>
+          <li><a href="02-customers.html" class="flex h-9 items-center gap-2.5 rounded-md px-2.5 text-muted-foreground hover:text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"><svg class="size-4 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>Customers</a></li>
+          <li><a href="04-revenue.html" class="flex h-9 items-center gap-2.5 rounded-md px-2.5 text-muted-foreground hover:text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"><svg class="size-4 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>Revenue</a></li>
+          <li><a href="05-invoices.html" class="flex h-9 items-center gap-2.5 rounded-md px-2.5 text-muted-foreground hover:text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"><svg class="size-4 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 16H8"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"/></svg>Invoices</a></li>
+          <li><a href="06-cohorts.html" class="flex h-9 items-center gap-2.5 rounded-md px-2.5 text-muted-foreground hover:text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"><svg class="size-4 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>Cohorts</a></li>
+          <li><a href="07-settings.html" class="flex h-9 items-center gap-2.5 rounded-md px-2.5 text-muted-foreground hover:text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"><svg class="size-4 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>Settings</a></li>
+        </ul>
+      </nav>
+      <div class="mt-auto border-t border-border p-3">
+        <div class="flex items-center gap-2.5 px-1 py-1 text-[13px]">
+          <span class="flex size-7 items-center justify-center rounded-full bg-chart-4/20 font-mono text-[11px] text-chart-4">DO</span>
+          <span class="flex-1"><span class="block font-semibold">Dana Okafor</span><span class="block text-[12px] text-muted-foreground">Owner</span></span>
+        </div>
+      </div>
+    </aside>
+    <div class="flex min-w-0 flex-1 flex-col">
+      <header class="sticky top-0 z-10 flex h-14 shrink-0 items-center gap-3 border-b border-border bg-background px-4 lg:px-6">
+        <details class="group lg:hidden">
+          <summary class="flex size-touch cursor-pointer list-none items-center justify-center rounded-md border border-border [&::-webkit-details-marker]:hidden outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-label="Menu">
+            <span class="group-open:hidden"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></span><span class="hidden group-open:block"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+          </summary>
+          <nav class="absolute inset-x-0 top-14 border-b border-border bg-card p-3" aria-label="Main">
+            <ul class="flex flex-col gap-0.5 text-[15px]">
+              <li><a href="01-overview.html" class="flex h-11 items-center gap-3 rounded-md px-3 bg-accent font-semibold"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>Overview</a></li>
+              <li><a href="02-customers.html" class="flex h-11 items-center gap-3 rounded-md px-3 text-muted-foreground"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>Customers</a></li>
+              <li><a href="04-revenue.html" class="flex h-11 items-center gap-3 rounded-md px-3 text-muted-foreground"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>Revenue</a></li>
+              <li><a href="05-invoices.html" class="flex h-11 items-center gap-3 rounded-md px-3 text-muted-foreground"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 16H8"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"/></svg>Invoices</a></li>
+              <li><a href="06-cohorts.html" class="flex h-11 items-center gap-3 rounded-md px-3 text-muted-foreground"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>Cohorts</a></li>
+              <li><a href="07-settings.html" class="flex h-11 items-center gap-3 rounded-md px-3 text-muted-foreground"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>Settings</a></li>
+            </ul>
+          </nav>
+        </details>
+        <h1 class="text-[18px] font-semibold tracking-[-0.01em]">Overview</h1>
+        <div class="ml-auto flex items-center gap-2">
+          <button class="flex h-9 items-center gap-2 rounded-md border border-border bg-card px-3 text-[13px] outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>October 2026<svg class="size-4 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+          <button class="hidden h-9 w-56 items-center gap-2 rounded-md border border-border bg-card px-3 text-[13px] text-muted-foreground md:flex outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>Search<kbd class="ml-auto rounded-sm border border-border px-1.5 font-mono text-[11px]">⌘K</kbd></button>
+        </div>
+      </header>
+      <main class="flex flex-col gap-4 p-4 lg:p-6">
+        <div class="grid gap-4 xl:grid-cols-[1.6fr_1fr]">
+          <section class="rounded-md border border-border bg-card p-5" aria-label="Monthly recurring revenue">
+            <div class="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <p class="text-[13px] text-muted-foreground">Monthly recurring revenue</p>
+                <p class="mt-1 font-mono text-[40px] leading-none tracking-[-0.02em] text-primary tabular-nums">$62,500</p>
+                <p class="mt-2 flex items-center gap-2 text-[13px] text-muted-foreground"><span class="inline-flex items-center gap-0.5 font-mono text-[12px] tabular-nums text-chart-3"><svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>+$2,660 · 4.4%</span>vs September</p>
+              </div>
+              <dl class="grid grid-cols-3 gap-x-6 gap-y-1 text-[13px]">
+                <dt class="text-muted-foreground">ARR</dt><dt class="text-muted-foreground">Customers</dt><dt class="text-muted-foreground">Churn</dt>
+                <dd><span class="font-mono tabular-nums text-[18px]">$750,000</span></dd><dd><span class="font-mono tabular-nums text-[18px]">712</span></dd><dd><span class="font-mono tabular-nums text-[18px]">3.9%</span></dd>
+                <dd><span class="inline-flex items-center gap-0.5 font-mono text-[12px] tabular-nums text-chart-3"><svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>4.4%</span></dd><dd><span class="inline-flex items-center gap-0.5 font-mono text-[12px] tabular-nums text-chart-3"><svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>+11</span></dd><dd><span class="inline-flex items-center gap-0.5 font-mono text-[12px] tabular-nums text-chart-3"><svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 7 10 10"/><path d="M17 7v10H7"/></svg>−0.5 pts</span></dd>
+              </dl>
+            </div>
+            <div class="mt-6"><svg class="h-auto w-full" viewBox="0 0 720 220" role="img" aria-label="MRR by month, from $41,200 in November 2025 to $62,500 in October 2026"><line x1="28" x2="720" y1="196" y2="196" stroke="var(--border)"/><text x="0" y="200" font-size="10" fill="var(--muted-foreground)" font-family="var(--font-mono)">0k</text><line x1="28" x2="720" y1="145.71428571428572" y2="145.71428571428572" stroke="var(--border)"/><text x="0" y="149.71428571428572" font-size="10" fill="var(--muted-foreground)" font-family="var(--font-mono)">20k</text><line x1="28" x2="720" y1="95.42857142857143" y2="95.42857142857143" stroke="var(--border)"/><text x="0" y="99.42857142857143" font-size="10" fill="var(--muted-foreground)" font-family="var(--font-mono)">40k</text><line x1="28" x2="720" y1="45.14285714285714" y2="45.14285714285714" stroke="var(--border)"/><text x="0" y="49.14285714285714" font-size="10" fill="var(--muted-foreground)" font-family="var(--font-mono)">60k</text><rect x="34" y="92.41142857142859" width="45.666666666666664" height="103.58857142857141" rx="2" fill="var(--chart-2)" opacity="0.45"><title>Nov 2025: $41,200</title></rect><text x="56.83333333333333" y="214" text-anchor="middle" font-size="10" fill="var(--muted-foreground)">Nov</text><rect x="91.66666666666666" y="87.76" width="45.666666666666664" height="108.24" rx="2" fill="var(--chart-2)" opacity="0.45"><title>Dec 2025: $43,050</title></rect><text x="114.49999999999999" y="214" text-anchor="middle" font-size="10" fill="var(--muted-foreground)">Dec</text><rect x="149.33333333333331" y="83.10857142857142" width="45.666666666666664" height="112.89142857142858" rx="2" fill="var(--chart-2)" opacity="0.45"><title>Jan 2026: $44,900</title></rect><text x="172.16666666666666" y="214" text-anchor="middle" font-size="10" fill="var(--muted-foreground)">Jan</text><rect x="207" y="79.53828571428572" width="45.666666666666664" height="116.46171428571428" rx="2" fill="var(--chart-2)" opacity="0.45"><title>Feb 2026: $46,320</title></rect><text x="229.83333333333334" y="214" text-anchor="middle" font-size="10" fill="var(--muted-foreground)">Feb</text><rect x="264.66666666666663" y="75.06285714285714" width="45.666666666666664" height="120.93714285714286" rx="2" fill="var(--chart-2)" opacity="0.45"><title>Mar 2026: $48,100</title></rect><text x="287.49999999999994" y="214" text-anchor="middle" font-size="10" fill="var(--muted-foreground)">Mar</text><rect x="322.3333333333333" y="70.66285714285713" width="45.666666666666664" height="125.33714285714287" rx="2" fill="var(--chart-2)" opacity="0.45"><title>Apr 2026: $49,850</title></rect><text x="345.16666666666663" y="214" text-anchor="middle" font-size="10" fill="var(--muted-foreground)">Apr</text><rect x="380" y="66.76571428571427" width="45.666666666666664" height="129.23428571428573" rx="2" fill="var(--chart-2)" opacity="0.45"><title>May 2026: $51,400</title></rect><text x="402.8333333333333" y="214" text-anchor="middle" font-size="10" fill="var(--muted-foreground)">May</text><rect x="437.66666666666663" y="62.08914285714286" width="45.666666666666664" height="133.91085714285714" rx="2" fill="var(--chart-2)" opacity="0.45"><title>Jun 2026: $53,260</title></rect><text x="460.49999999999994" y="214" text-anchor="middle" font-size="10" fill="var(--muted-foreground)">Jun</text><rect x="495.3333333333333" y="57.63885714285715" width="45.666666666666664" height="138.36114285714285" rx="2" fill="var(--chart-2)" opacity="0.45"><title>Jul 2026: $55,030</title></rect><text x="518.1666666666666" y="214" text-anchor="middle" font-size="10" fill="var(--muted-foreground)">Jul</text><rect x="553" y="51.152000000000015" width="45.666666666666664" height="144.84799999999998" rx="2" fill="var(--chart-2)" opacity="0.45"><title>Aug 2026: $57,610</title></rect><text x="575.8333333333334" y="214" text-anchor="middle" font-size="10" fill="var(--muted-foreground)">Aug</text><rect x="610.6666666666666" y="45.54514285714285" width="45.666666666666664" height="150.45485714285715" rx="2" fill="var(--chart-2)" opacity="0.45"><title>Sep 2026: $59,840</title></rect><text x="633.5" y="214" text-anchor="middle" font-size="10" fill="var(--muted-foreground)">Sep</text><rect x="668.3333333333333" y="38.85714285714286" width="45.666666666666664" height="157.14285714285714" rx="2" fill="var(--primary)" opacity="1"><title>Oct 2026: $62,500</title></rect><text x="691.1666666666666" y="214" text-anchor="middle" font-size="10" fill="var(--muted-foreground)">Oct</text></svg></div>
+          </section>
+          <section class="rounded-md border border-border bg-card " aria-label="MRR movement · October">
+          <div class="flex min-h-11 items-center justify-between gap-3 border-b border-border px-4">
+            <h2 class="text-[13px] font-semibold">MRR movement · October</h2>
+          </div>
+          <div class="p-4">
+            <ul class="flex flex-col gap-3">
+              <li><div class="mb-1 flex justify-between text-[13px]"><span>New</span><span class="font-mono tabular-nums ">+$4,210</span></div><span class="block h-2 rounded-sm bg-muted"><span class="block h-full rounded-sm bg-chart-3" style="width:100.0%"></span></span></li>
+              <li><div class="mb-1 flex justify-between text-[13px]"><span>Expansion</span><span class="font-mono tabular-nums ">+$1,890</span></div><span class="block h-2 rounded-sm bg-muted"><span class="block h-full rounded-sm bg-chart-2" style="width:44.9%"></span></span></li>
+              <li><div class="mb-1 flex justify-between text-[13px]"><span>Contraction</span><span class="font-mono tabular-nums text-muted-foreground">−$420</span></div><span class="block h-2 rounded-sm bg-muted"><span class="block h-full rounded-sm bg-muted-foreground" style="width:10.0%"></span></span></li>
+              <li><div class="mb-1 flex justify-between text-[13px]"><span>Churn</span><span class="font-mono tabular-nums text-muted-foreground">−$3,020</span></div><span class="block h-2 rounded-sm bg-muted"><span class="block h-full rounded-sm bg-destructive" style="width:71.7%"></span></span></li>
+            </ul>
+            <div class="mt-4 flex justify-between border-t border-border pt-3 text-[13px]"><span class="font-semibold">Net new MRR</span><span class="font-mono tabular-nums font-semibold text-chart-3">+$2,660</span></div>
+            <p class="mt-3 text-[12px] text-muted-foreground">$59,840 + $4,210 + $1,890 − $420 − $3,020 = $62,500</p>
+          </div>
+        </section>
+        </div>
+        <div class="grid gap-4 xl:grid-cols-[1fr_1.6fr]">
+          <section class="rounded-md border border-border bg-card " aria-label="MRR by plan">
+          <div class="flex min-h-11 items-center justify-between gap-3 border-b border-border px-4">
+            <h2 class="text-[13px] font-semibold">MRR by plan</h2>
+          </div>
+          <div class="p-4">
+            <div class="flex h-3 overflow-hidden rounded-sm" aria-hidden="true"><span class="bg-muted-foreground" style="width:19.1%"></span><span class="bg-chart-1" style="width:37.4%"></span><span class="bg-chart-2" style="width:27.7%"></span><span class="bg-chart-3" style="width:15.8%"></span></div>
+            <table class="mt-4 w-full text-[13px]">
+              <thead class="text-left text-[12px] text-muted-foreground"><tr><th class="pb-2 font-normal">Plan</th><th class="pb-2 text-right font-normal">Customers</th><th class="pb-2 text-right font-normal">MRR</th></tr></thead>
+              <tbody>
+                <tr class="border-t border-border"><td class="py-2"><span class="mr-2 inline-block size-2 rounded-sm bg-muted-foreground"></span>Starter</td><td class="py-2 text-right"><span class="font-mono tabular-nums ">412</span></td><td class="py-2 text-right"><span class="font-mono tabular-nums ">$11,948</span></td></tr>
+                <tr class="border-t border-border"><td class="py-2"><span class="mr-2 inline-block size-2 rounded-sm bg-chart-1"></span>Growth</td><td class="py-2 text-right"><span class="font-mono tabular-nums ">236</span></td><td class="py-2 text-right"><span class="font-mono tabular-nums ">$23,364</span></td></tr>
+                <tr class="border-t border-border"><td class="py-2"><span class="mr-2 inline-block size-2 rounded-sm bg-chart-2"></span>Scale</td><td class="py-2 text-right"><span class="font-mono tabular-nums ">58</span></td><td class="py-2 text-right"><span class="font-mono tabular-nums ">$17,342</span></td></tr>
+                <tr class="border-t border-border"><td class="py-2"><span class="mr-2 inline-block size-2 rounded-sm bg-chart-3"></span>Enterprise</td><td class="py-2 text-right"><span class="font-mono tabular-nums ">6</span></td><td class="py-2 text-right"><span class="font-mono tabular-nums ">$9,846</span></td></tr>
+                <tr class="border-t border-border font-semibold"><td class="py-2">Total</td><td class="py-2 text-right"><span class="font-mono tabular-nums ">712</span></td><td class="py-2 text-right"><span class="font-mono tabular-nums ">$62,500</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+          <section class="rounded-md border border-border bg-card " aria-label="Recent events">
+          <div class="flex min-h-11 items-center justify-between gap-3 border-b border-border px-4">
+            <h2 class="text-[13px] font-semibold">Recent events</h2><a href="02-customers.html" class="text-[13px] text-muted-foreground hover:text-foreground">All customers</a>
+          </div>
+          <ul>
+            <li tabindex="0" class="flex items-center gap-3 border-b border-border px-4 py-2.5 last:border-0 focus-visible:bg-accent focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring"><span class="size-1.5 shrink-0 rounded-full bg-chart-3"></span><span class="min-w-0 flex-1 truncate"><a href="03-customer.html" class="font-semibold hover:underline">Strata Hotels</a> <span class="text-muted-foreground">started Enterprise</span></span><span class="font-mono tabular-nums text-[13px]">+$900</span><span class="w-20 text-right text-[12px] text-muted-foreground">2h ago</span></li>
+            <li tabindex="0" class="flex items-center gap-3 border-b border-border px-4 py-2.5 last:border-0 focus-visible:bg-accent focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring"><span class="size-1.5 shrink-0 rounded-full bg-chart-2"></span><span class="min-w-0 flex-1 truncate"><a href="03-customer.html" class="font-semibold hover:underline">Marlow & Finch</a> <span class="text-muted-foreground">upgraded Growth → Scale</span></span><span class="font-mono tabular-nums text-[13px]">+$200</span><span class="w-20 text-right text-[12px] text-muted-foreground">5h ago</span></li>
+            <li tabindex="0" class="flex items-center gap-3 border-b border-border px-4 py-2.5 last:border-0 focus-visible:bg-accent focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring"><span class="size-1.5 shrink-0 rounded-full bg-destructive"></span><span class="min-w-0 flex-1 truncate"><a href="03-customer.html" class="font-semibold hover:underline">Oakridge HOA</a> <span class="text-muted-foreground">cancelled Starter</span></span><span class="font-mono tabular-nums text-[13px]">−$29</span><span class="w-20 text-right text-[12px] text-muted-foreground">Yesterday</span></li>
+            <li tabindex="0" class="flex items-center gap-3 border-b border-border px-4 py-2.5 last:border-0 focus-visible:bg-accent focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring"><span class="size-1.5 shrink-0 rounded-full bg-primary"></span><span class="min-w-0 flex-1 truncate"><a href="03-customer.html" class="font-semibold hover:underline">Kestrel Events</a> <span class="text-muted-foreground">payment failed, retrying</span></span><span class="font-mono tabular-nums text-[13px]">$99</span><span class="w-20 text-right text-[12px] text-muted-foreground">Yesterday</span></li>
+            <li tabindex="0" class="flex items-center gap-3 border-b border-border px-4 py-2.5 last:border-0 focus-visible:bg-accent focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring"><span class="size-1.5 shrink-0 rounded-full bg-chart-3"></span><span class="min-w-0 flex-1 truncate"><a href="03-customer.html" class="font-semibold hover:underline">Tamarind Catering</a> <span class="text-muted-foreground">started Growth</span></span><span class="font-mono tabular-nums text-[13px]">+$99</span><span class="w-20 text-right text-[12px] text-muted-foreground">Oct 30</span></li>
+          </ul>
+        </section>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
