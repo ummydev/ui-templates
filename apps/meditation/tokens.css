@@ -1,0 +1,81 @@
+/*
+ * Calm design system tokens, light and dark, as shadcn-style CSS variables.
+ * Full spec: DESIGN.md next to this file, or https://codexdesign.io/design-systems/calm
+ * Light is the default; put class="dark" on <html> for the dark theme.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Newsreader:wght@500&family=Figtree:wght@400;600&display=swap");
+
+:root {
+  --radius: 1.5rem;
+  --touch: 48px;
+  --screen-padding: 24px;
+  --tab-bar: 68px;
+  --font-sans: "Figtree", system-ui, sans-serif;
+  --font-heading: "Newsreader", Georgia, serif;
+  --font-mono: "Figtree", system-ui, sans-serif;
+  --background: oklch(0.961 0.007 124.448);
+  --foreground: oklch(0.272 0.02 163.043);
+  --card: oklch(0.986 0.004 121.559);
+  --card-foreground: oklch(0.272 0.02 163.043);
+  --popover: oklch(0.986 0.004 121.559);
+  --popover-foreground: oklch(0.272 0.02 163.043);
+  --primary: oklch(0.413 0.049 167.738);
+  --primary-foreground: oklch(0.961 0.007 124.448);
+  --secondary: oklch(0.913 0.015 145.447);
+  --secondary-foreground: oklch(0.272 0.02 163.043);
+  --muted: oklch(0.934 0.011 136.561);
+  --muted-foreground: oklch(0.491 0.023 159.104);
+  --accent: oklch(0.929 0.016 133.827);
+  --accent-foreground: oklch(0.272 0.02 163.043);
+  --destructive: oklch(0.502 0.149 30.61);
+  --border: oklch(0.885 0.018 140.021);
+  --input: oklch(0.856 0.021 138.44);
+  --ring: oklch(0.413 0.049 167.738);
+  --chart-1: oklch(0.413 0.049 167.738);
+  --chart-2: oklch(0.626 0.098 56.778);
+  --chart-3: oklch(0.612 0.088 255.035);
+  --chart-4: oklch(0.589 0.082 336.495);
+  --chart-5: oklch(0.645 0.102 129.249);
+  --sidebar: oklch(0.986 0.004 121.559);
+  --sidebar-foreground: oklch(0.272 0.02 163.043);
+  --sidebar-primary: oklch(0.413 0.049 167.738);
+  --sidebar-primary-foreground: oklch(0.961 0.007 124.448);
+  --sidebar-accent: oklch(0.929 0.016 133.827);
+  --sidebar-accent-foreground: oklch(0.272 0.02 163.043);
+  --sidebar-border: oklch(0.885 0.018 140.021);
+  --sidebar-ring: oklch(0.413 0.049 167.738);
+}
+
+.dark {
+  --background: oklch(0.202 0.011 163.644);
+  --foreground: oklch(0.937 0.01 145.493);
+  --card: oklch(0.234 0.014 163.477);
+  --card-foreground: oklch(0.937 0.01 145.493);
+  --popover: oklch(0.234 0.014 163.477);
+  --popover-foreground: oklch(0.937 0.01 145.493);
+  --primary: oklch(0.787 0.054 160.274);
+  --primary-foreground: oklch(0.202 0.011 163.644);
+  --secondary: oklch(0.27 0.017 163.393);
+  --secondary-foreground: oklch(0.937 0.01 145.493);
+  --muted: oklch(0.251 0.014 163.622);
+  --muted-foreground: oklch(0.7 0.022 161.216);
+  --accent: oklch(0.282 0.017 163.492);
+  --accent-foreground: oklch(0.937 0.01 145.493);
+  --destructive: oklch(0.689 0.13 31.169);
+  --border: oklch(0.317 0.018 161.322);
+  --input: oklch(0.358 0.02 165.566);
+  --ring: oklch(0.787 0.054 160.274);
+  --chart-1: oklch(0.787 0.054 160.274);
+  --chart-2: oklch(0.767 0.093 58.756);
+  --chart-3: oklch(0.761 0.073 255.745);
+  --chart-4: oklch(0.769 0.075 336.085);
+  --chart-5: oklch(0.818 0.092 126.655);
+  --sidebar: oklch(0.234 0.014 163.477);
+  --sidebar-foreground: oklch(0.937 0.01 145.493);
+  --sidebar-primary: oklch(0.787 0.054 160.274);
+  --sidebar-primary-foreground: oklch(0.202 0.011 163.644);
+  --sidebar-accent: oklch(0.282 0.017 163.492);
+  --sidebar-accent-foreground: oklch(0.937 0.01 145.493);
+  --sidebar-border: oklch(0.317 0.018 161.322);
+  --sidebar-ring: oklch(0.787 0.054 160.274);
+}

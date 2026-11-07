@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noticing the pull · Stillpoint</title>
+  <!-- Calm design system: colours, fonts and radius. Add class="dark" to <html> for the dark theme. -->
+  <link rel="stylesheet" href="../tokens.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  <style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
+    @theme inline {
+      --color-background: var(--background);
+      --color-foreground: var(--foreground);
+      --color-card: var(--card);
+      --color-card-foreground: var(--card-foreground);
+      --color-popover: var(--popover);
+      --color-popover-foreground: var(--popover-foreground);
+      --color-primary: var(--primary);
+      --color-primary-foreground: var(--primary-foreground);
+      --color-secondary: var(--secondary);
+      --color-secondary-foreground: var(--secondary-foreground);
+      --color-muted: var(--muted);
+      --color-muted-foreground: var(--muted-foreground);
+      --color-accent: var(--accent);
+      --color-accent-foreground: var(--accent-foreground);
+      --color-destructive: var(--destructive);
+      --color-border: var(--border);
+      --color-input: var(--input);
+      --color-ring: var(--ring);
+      --color-chart-1: var(--chart-1);
+      --color-chart-2: var(--chart-2);
+      --color-chart-3: var(--chart-3);
+      --color-chart-4: var(--chart-4);
+      --color-chart-5: var(--chart-5);
+      --font-sans: var(--font-sans);
+      --font-heading: var(--font-heading);
+      --radius-sm: calc(var(--radius) - 12px);
+      --radius-md: calc(var(--radius) - 8px);
+      --radius-lg: var(--radius);
+      --spacing-touch: var(--touch);
+      --spacing-screen: var(--screen-padding);
+      --spacing-tab-bar: var(--tab-bar);
+      /* Very soft, and only on sheets. */
+      --shadow-sheet: 0 -8px 32px -16px oklch(0.25 0.02 155 / 0.3);
+    }
+    @layer base {
+      body { @apply bg-background font-sans text-foreground antialiased; }
+    }
+  </style>
+</head>
+<body>
+  <main class="relative mx-auto flex h-[844px] w-[390px] flex-col overflow-hidden bg-background">
+    <div class="flex h-12 shrink-0 items-center justify-between px-8 pt-2 text-[15px] font-semibold">
+      <span class="tabular-nums">9:41</span>
+      <span class="flex items-center gap-1.5" aria-hidden="true">
+        <svg class="h-3 w-[18px]" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+        <svg class="h-3 w-4" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.2-1.3A10.4 10.4 0 0 0 8 .5 10.4 10.4 0 0 0 .8 3.3L2 4.6a8.6 8.6 0 0 1 6-2.4Zm0 3.6c1.3 0 2.5.5 3.4 1.3l1.2-1.3A6.6 6.6 0 0 0 8 4a6.6 6.6 0 0 0-4.6 1.8l1.2 1.3c.9-.8 2.1-1.3 3.4-1.3Zm0 3.5c.5 0 .9.2 1.2.5L8 11.2 6.8 9.8c.3-.3.7-.5 1.2-.5Z"/></svg>
+        <svg class="h-3 w-[26px]" viewBox="0 0 26 12" fill="none"><rect x=".5" y=".5" width="22" height="11" rx="3" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="16" height="8" rx="1.8" fill="currentColor"/><path d="M24 4v4a2 2 0 0 0 0-4Z" fill="currentColor" opacity=".4"/></svg>
+      </span>
+    </div>
+    <header class="flex shrink-0 items-center justify-between px-2">
+      <a href="03-course.html" class="flex size-touch items-center justify-center rounded-full" aria-label="Close"><svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></a>
+      <p class="text-[14px] text-muted-foreground">Steady Mind · Day 4</p>
+      <span class="size-touch"></span>
+    </header>
+    <div class="flex flex-1 flex-col items-center overflow-hidden px-screen pt-4">
+      <h1 class="font-heading text-[28px] text-center leading-[1.15] font-medium tracking-[-0.01em]">Noticing the pull</h1>
+      <p class="mt-1 text-[15px] text-muted-foreground">Jonah Reyes</p>
+      <div class="relative mt-8 flex items-center justify-center" role="timer" aria-label="3 minutes 40 seconds left">
+        <svg class="size-[264px] -rotate-90" viewBox="0 0 264 264" aria-hidden="true">
+          <circle cx="132" cy="132" r="120" fill="none" stroke="var(--muted)" stroke-width="8"/>
+          <circle cx="132" cy="132" r="120" fill="none" stroke="var(--primary)" stroke-width="8" stroke-linecap="round" stroke-dasharray="446.8 754.0"/>
+        </svg>
+        <div class="absolute flex flex-col items-center">
+          <span class="font-heading text-[56px] leading-none font-medium tabular-nums">3:40</span>
+          <span class="mt-2 text-[14px] text-muted-foreground">left of 9:00</span>
+        </div>
+      </div>
+      <div class="mt-8 flex items-center gap-8">
+        <button class="flex size-14 items-center justify-center rounded-full" aria-label="Back 15 seconds"><svg class="size-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg></button>
+        <button class="flex size-20 items-center justify-center rounded-full bg-primary text-primary-foreground" aria-label="Pause"><svg class="size-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="14" y="3" width="5" height="18" rx="1"/><rect x="5" y="3" width="5" height="18" rx="1"/></svg></button>
+        <button class="flex size-14 items-center justify-center rounded-full" aria-label="Forward 15 seconds"><svg class="size-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg></button>
+      </div>
+    </div>
+    <section class="shrink-0 rounded-t-lg bg-card px-screen pt-5 shadow-sheet" aria-label="Background sound">
+      <div class="grid grid-cols-4 gap-2" role="radiogroup">
+        <button role="radio" aria-checked="true" class="flex h-16 flex-col items-center justify-center gap-1 rounded-md text-[13px] font-semibold bg-secondary text-foreground"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M16 14v6"/><path d="M8 14v6"/><path d="M12 16v6"/></svg>Rain</button>
+        <button role="radio" aria-checked="false" class="flex h-16 flex-col items-center justify-center gap-1 rounded-md text-[13px] font-semibold text-muted-foreground"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.8V10a3 3 0 0 1 6 0Z"/><path d="M7 16v6"/><path d="M13 19v3"/><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"/></svg>Forest</button>
+        <button role="radio" aria-checked="false" class="flex h-16 flex-col items-center justify-center gap-1 rounded-md text-[13px] font-semibold text-muted-foreground"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12q2.5 2 5 0t5 0 5 0 5 0"/><path d="M2 19q2.5 2 5 0t5 0 5 0 5 0"/><path d="M2 5q2.5 2 5 0t5 0 5 0 5 0"/></svg>Ocean</button>
+        <button role="radio" aria-checked="false" class="flex h-16 flex-col items-center justify-center gap-1 rounded-md text-[13px] font-semibold text-muted-foreground"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/></svg>None</button>
+      </div>
+      <label class="mt-4 flex h-touch items-center gap-4 text-muted-foreground">
+        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/></svg>
+        <span class="relative h-1 flex-1 rounded-full bg-muted"><span class="absolute inset-y-0 left-0 w-[60%] rounded-full bg-primary"></span><span class="absolute top-1/2 left-[60%] size-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 border-primary bg-card"></span></span>
+        <svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/><path d="M16 9a5 5 0 0 1 0 6"/><path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg>
+        <input type="range" class="sr-only" value="60" aria-label="Sound volume">
+      </label>
+      <div class="flex h-[34px] shrink-0 items-end justify-center pb-2" aria-hidden="true"><span class="h-[5px] w-[134px] rounded-full bg-foreground/70"></span></div>
+    </section>
+  </main>
+</body>
+</html>
