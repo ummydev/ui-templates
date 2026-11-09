@@ -1,0 +1,81 @@
+/*
+ * Wallet design system tokens, light and dark, as shadcn-style CSS variables.
+ * Full spec: DESIGN.md next to this file, or https://codexdesign.io/design-systems/wallet
+ * Light is the default; put class="dark" on <html> for the dark theme.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&family=JetBrains+Mono:wght@400&display=swap");
+
+:root {
+  --radius: 1.125rem;
+  --touch: 48px;
+  --screen-padding: 20px;
+  --tab-bar: 64px;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-heading: "Manrope", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --background: oklch(0.974 0.002 165.076);
+  --foreground: oklch(0.206 0.018 169.92);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.206 0.018 169.92);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.206 0.018 169.92);
+  --primary: oklch(0.521 0.106 165.168);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.944 0.016 166.716);
+  --secondary-foreground: oklch(0.375 0.073 165.96);
+  --muted: oklch(0.955 0.005 165.005);
+  --muted-foreground: oklch(0.483 0.019 166.087);
+  --accent: oklch(0.944 0.012 162.042);
+  --accent-foreground: oklch(0.206 0.018 169.92);
+  --destructive: oklch(0.529 0.186 26.391);
+  --border: oklch(0.912 0.01 164.85);
+  --input: oklch(0.87 0.013 164.753);
+  --ring: oklch(0.521 0.106 165.168);
+  --chart-1: oklch(0.521 0.106 165.168);
+  --chart-2: oklch(0.557 0.172 259.651);
+  --chart-3: oklch(0.738 0.143 72.977);
+  --chart-4: oklch(0.579 0.169 354.99);
+  --chart-5: oklch(0.6 0.152 285.71);
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.206 0.018 169.92);
+  --sidebar-primary: oklch(0.521 0.106 165.168);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.944 0.012 162.042);
+  --sidebar-accent-foreground: oklch(0.206 0.018 169.92);
+  --sidebar-border: oklch(0.912 0.01 164.85);
+  --sidebar-ring: oklch(0.521 0.106 165.168);
+}
+
+.dark {
+  --background: oklch(0.175 0.01 172.763);
+  --foreground: oklch(0.943 0.009 161.345);
+  --card: oklch(0.213 0.013 170.148);
+  --card-foreground: oklch(0.943 0.009 161.345);
+  --popover: oklch(0.213 0.013 170.148);
+  --popover-foreground: oklch(0.943 0.009 161.345);
+  --primary: oklch(0.78 0.139 164.374);
+  --primary-foreground: oklch(0.175 0.01 172.763);
+  --secondary: oklch(0.257 0.017 170.647);
+  --secondary-foreground: oklch(0.943 0.009 161.345);
+  --muted: oklch(0.234 0.014 172.676);
+  --muted-foreground: oklch(0.692 0.023 167.148);
+  --accent: oklch(0.276 0.018 172.515);
+  --accent-foreground: oklch(0.943 0.009 161.345);
+  --destructive: oklch(0.735 0.163 21.864);
+  --border: oklch(0.3 0.019 167.781);
+  --input: oklch(0.339 0.019 169.764);
+  --ring: oklch(0.78 0.139 164.374);
+  --chart-1: oklch(0.78 0.139 164.374);
+  --chart-2: oklch(0.73 0.115 260.366);
+  --chart-3: oklch(0.831 0.118 77.962);
+  --chart-4: oklch(0.752 0.131 352.876);
+  --chart-5: oklch(0.759 0.108 287.753);
+  --sidebar: oklch(0.213 0.013 170.148);
+  --sidebar-foreground: oklch(0.943 0.009 161.345);
+  --sidebar-primary: oklch(0.78 0.139 164.374);
+  --sidebar-primary-foreground: oklch(0.175 0.01 172.763);
+  --sidebar-accent: oklch(0.276 0.018 172.515);
+  --sidebar-accent-foreground: oklch(0.943 0.009 161.345);
+  --sidebar-border: oklch(0.3 0.019 167.781);
+  --sidebar-ring: oklch(0.78 0.139 164.374);
+}

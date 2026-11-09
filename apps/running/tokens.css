@@ -1,0 +1,81 @@
+/*
+ * Stride design system tokens, light and dark, as shadcn-style CSS variables.
+ * Full spec: DESIGN.md next to this file, or https://codexdesign.io/design-systems/stride
+ * Dark is the default: screens put class="dark" on <html>; remove it for the light theme.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@500;600&display=swap");
+
+:root {
+  --radius: 1rem;
+  --touch: 48px;
+  --screen-padding: 20px;
+  --tab-bar: 64px;
+  --font-sans: "Barlow", system-ui, sans-serif;
+  --font-heading: "Barlow Condensed", system-ui, sans-serif;
+  --font-mono: "Barlow Condensed", system-ui, sans-serif;
+  --background: oklch(0.973 0.003 106.448);
+  --foreground: oklch(0.182 0.004 264.459);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.182 0.004 264.459);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.182 0.004 264.459);
+  --primary: oklch(0.556 0.186 36.138);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.943 0.003 106.45);
+  --secondary-foreground: oklch(0.182 0.004 264.459);
+  --muted: oklch(0.952 0.003 106.45);
+  --muted-foreground: oklch(0.487 0.014 259.822);
+  --accent: oklch(0.927 0.004 106.477);
+  --accent-foreground: oklch(0.182 0.004 264.459);
+  --destructive: oklch(0.519 0.197 22.16);
+  --border: oklch(0.9 0.004 106.48);
+  --input: oklch(0.856 0.005 106.514);
+  --ring: oklch(0.556 0.186 36.138);
+  --chart-1: oklch(0.556 0.186 36.138);
+  --chart-2: oklch(0.623 0.109 182.094);
+  --chart-3: oklch(0.699 0.144 82.914);
+  --chart-4: oklch(0.53 0.188 272.633);
+  --chart-5: oklch(0.579 0.169 354.99);
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.182 0.004 264.459);
+  --sidebar-primary: oklch(0.556 0.186 36.138);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.927 0.004 106.477);
+  --sidebar-accent-foreground: oklch(0.182 0.004 264.459);
+  --sidebar-border: oklch(0.9 0.004 106.48);
+  --sidebar-ring: oklch(0.556 0.186 36.138);
+}
+
+.dark {
+  --background: oklch(0.164 0.005 264.443);
+  --foreground: oklch(0.967 0.003 106.449);
+  --card: oklch(0.213 0.007 258.366);
+  --card-foreground: oklch(0.967 0.003 106.449);
+  --popover: oklch(0.213 0.007 258.366);
+  --popover-foreground: oklch(0.967 0.003 106.449);
+  --primary: oklch(0.683 0.21 37.964);
+  --primary-foreground: oklch(0.164 0.005 264.443);
+  --secondary: oklch(0.264 0.01 260.699);
+  --secondary-foreground: oklch(0.967 0.003 106.449);
+  --muted: oklch(0.238 0.009 255.597);
+  --muted-foreground: oklch(0.674 0.016 254.645);
+  --accent: oklch(0.284 0.012 258.372);
+  --accent-foreground: oklch(0.967 0.003 106.449);
+  --destructive: oklch(0.678 0.213 15.77);
+  --border: oklch(0.3 0.012 258.371);
+  --input: oklch(0.339 0.014 256.774);
+  --ring: oklch(0.683 0.21 37.964);
+  --chart-1: oklch(0.683 0.21 37.964);
+  --chart-2: oklch(0.794 0.127 183.43);
+  --chart-3: oklch(0.854 0.157 84.13);
+  --chart-4: oklch(0.681 0.169 275.032);
+  --chart-5: oklch(0.75 0.173 353.77);
+  --sidebar: oklch(0.213 0.007 258.366);
+  --sidebar-foreground: oklch(0.967 0.003 106.449);
+  --sidebar-primary: oklch(0.683 0.21 37.964);
+  --sidebar-primary-foreground: oklch(0.164 0.005 264.443);
+  --sidebar-accent: oklch(0.284 0.012 258.372);
+  --sidebar-accent-foreground: oklch(0.967 0.003 106.449);
+  --sidebar-border: oklch(0.3 0.012 258.371);
+  --sidebar-ring: oklch(0.683 0.21 37.964);
+}

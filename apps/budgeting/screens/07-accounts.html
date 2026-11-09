@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accounts · Wallet</title>
+  <!-- Wallet design system: colours, fonts and radius. Add class="dark" to <html> for the dark theme. -->
+  <link rel="stylesheet" href="../tokens.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  <style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
+    @theme inline {
+      --color-background: var(--background);
+      --color-foreground: var(--foreground);
+      --color-card: var(--card);
+      --color-card-foreground: var(--card-foreground);
+      --color-popover: var(--popover);
+      --color-popover-foreground: var(--popover-foreground);
+      --color-primary: var(--primary);
+      --color-primary-foreground: var(--primary-foreground);
+      --color-secondary: var(--secondary);
+      --color-secondary-foreground: var(--secondary-foreground);
+      --color-muted: var(--muted);
+      --color-muted-foreground: var(--muted-foreground);
+      --color-accent: var(--accent);
+      --color-accent-foreground: var(--accent-foreground);
+      --color-destructive: var(--destructive);
+      --color-border: var(--border);
+      --color-input: var(--input);
+      --color-ring: var(--ring);
+      --color-chart-1: var(--chart-1);
+      --color-chart-2: var(--chart-2);
+      --color-chart-3: var(--chart-3);
+      --color-chart-4: var(--chart-4);
+      --color-chart-5: var(--chart-5);
+      --font-sans: var(--font-sans);
+      --font-heading: var(--font-heading);
+      --radius-sm: calc(var(--radius) - 8px);
+      --radius-md: calc(var(--radius) - 6px);
+      --radius-lg: var(--radius);
+      --spacing-touch: var(--touch);
+      --spacing-screen: var(--screen-padding);
+      --spacing-tab-bar: var(--tab-bar);
+      /* Soft and low, on cards and the add button. */
+      --shadow-card: 0 1px 2px oklch(0.2 0.02 160 / 0.06), 0 4px 14px -6px oklch(0.2 0.02 160 / 0.12);
+      --shadow-float: 0 8px 20px -6px oklch(0.45 0.1 165 / 0.45);
+    }
+    @layer base {
+      body { @apply bg-background font-sans font-medium text-foreground antialiased; }
+    }
+  </style>
+</head>
+<body>
+  <main class="relative mx-auto flex h-[844px] w-[390px] flex-col overflow-hidden bg-background">
+    <div class="flex h-12 shrink-0 items-center justify-between px-8 pt-2 text-[15px] font-semibold">
+      <span class="tabular-nums">9:41</span>
+      <span class="flex items-center gap-1.5" aria-hidden="true">
+        <svg class="h-3 w-[18px]" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+        <svg class="h-3 w-4" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.2-1.3A10.4 10.4 0 0 0 8 .5 10.4 10.4 0 0 0 .8 3.3L2 4.6a8.6 8.6 0 0 1 6-2.4Zm0 3.6c1.3 0 2.5.5 3.4 1.3l1.2-1.3A6.6 6.6 0 0 0 8 4a6.6 6.6 0 0 0-4.6 1.8l1.2 1.3c.9-.8 2.1-1.3 3.4-1.3Zm0 3.5c.5 0 .9.2 1.2.5L8 11.2 6.8 9.8c.3-.3.7-.5 1.2-.5Z"/></svg>
+        <svg class="h-3 w-[26px]" viewBox="0 0 26 12" fill="none"><rect x=".5" y=".5" width="22" height="11" rx="3" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="16" height="8" rx="1.8" fill="currentColor"/><path d="M24 4v4a2 2 0 0 0 0-4Z" fill="currentColor" opacity=".4"/></svg>
+      </span>
+    </div>
+    <header class="flex shrink-0 items-center px-2 pb-2">
+      <a href="01-overview.html" class="flex size-touch items-center justify-center rounded-full" aria-label="Back"><svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></a>
+      <h1 class="flex-1 text-center text-[18px] font-bold">Accounts</h1>
+      <a href="#" class="flex size-touch items-center justify-center rounded-full" aria-label="Add an account"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></a>
+    </header>
+    <div class="flex flex-1 flex-col gap-4 overflow-hidden px-screen">
+      <section class="rounded-lg bg-card p-5 shadow-card" aria-label="Net worth">
+        <p class="text-[13px] text-muted-foreground">Net worth</p>
+        <p class="text-[40px] leading-[1.05] font-bold tracking-[-0.02em] tabular-nums">$65,914.40</p>
+        <p class="mt-1 text-[13px] font-semibold text-primary tabular-nums">+$1,842.17 since October</p>
+        <div class="mt-4 flex h-2 gap-0.5 overflow-hidden rounded-full" aria-hidden="true">
+          <span class="bg-chart-2" style="width:9.8%"></span><span class="bg-chart-1" style="width:27.3%"></span><span class="bg-chart-5" style="width:62.9%"></span>
+        </div>
+        <p class="mt-2 flex gap-4 text-[12px] text-muted-foreground"><span class="flex items-center gap-1.5"><span class="size-2 rounded-full bg-chart-2"></span>Banks</span><span class="flex items-center gap-1.5"><span class="size-2 rounded-full bg-chart-1"></span>Savings</span><span class="flex items-center gap-1.5"><span class="size-2 rounded-full bg-chart-5"></span>Investments</span></p>
+      </section>
+      <section aria-label="Cash and banks">
+        <h2 class="mb-1.5 flex justify-between px-1 text-[13px] font-semibold text-muted-foreground"><span>Cash and banks</span><span class="tabular-nums">$24,818.15</span></h2>
+        <ul class="flex flex-col divide-y divide-border rounded-lg bg-card shadow-card">
+          <li><a href="#" class="flex min-h-[60px] items-center gap-3 px-4 py-2"><span class="flex size-10 items-center justify-center rounded-full bg-chart-2/12 text-chart-2"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 18v-7"/><path d="M11.119 2.205a2 2 0 0 1 1.762 0l7.84 3.846A.5.5 0 0 1 20.5 7h-17a.5.5 0 0 1-.22-.949z"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M3 22h18"/><path d="M6 18v-7"/></svg></span><span class="flex-1"><span class="block text-[16px] font-semibold">Chase Checking</span><span class="block text-[13px] text-muted-foreground">··4021</span></span><span class="text-[16px] font-bold tabular-nums">$6,482.15</span></a></li>
+          <li><a href="#" class="flex min-h-[60px] items-center gap-3 px-4 py-2"><span class="flex size-10 items-center justify-center rounded-full bg-chart-1/12 text-chart-1"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 17h3v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-3a3.16 3.16 0 0 0 2-2h1a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-1a5 5 0 0 0-2-4V3a4 4 0 0 0-3.2 1.6l-.3.4H11a6 6 0 0 0-6 6v1a5 5 0 0 0 2 4v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1z"/><path d="M16 10h.01"/><path d="M2 8v1a2 2 0 0 0 2 2h1"/></svg></span><span class="flex-1"><span class="block text-[16px] font-semibold">Ally Savings</span><span class="block text-[13px] text-muted-foreground">4.20% APY</span></span><span class="text-[16px] font-bold tabular-nums">$18,250.00</span></a></li>
+          <li><a href="#" class="flex min-h-[60px] items-center gap-3 px-4 py-2"><span class="flex size-10 items-center justify-center rounded-full bg-chart-3/12 text-chart-3"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg></span><span class="flex-1"><span class="block text-[16px] font-semibold">Cash</span><span class="block text-[13px] text-muted-foreground">Wallet</span></span><span class="text-[16px] font-bold tabular-nums">$86.00</span></a></li>
+        </ul>
+      </section>
+      <section aria-label="Credit">
+        <h2 class="mb-1.5 flex justify-between px-1 text-[13px] font-semibold text-muted-foreground"><span>Credit</span><span class="tabular-nums">−$1,214.63</span></h2>
+        <ul class="flex flex-col divide-y divide-border rounded-lg bg-card shadow-card">
+          <li><a href="#" class="flex min-h-[60px] items-center gap-3 px-4 py-2"><span class="flex size-10 items-center justify-center rounded-full bg-chart-4/12 text-chart-4"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/><path d="M6 14h2"/></svg></span><span class="flex-1"><span class="block text-[16px] font-semibold">Chase Sapphire</span><span class="block text-[13px] text-muted-foreground">Due Dec 4 · limit $8,000</span></span><span class="text-[16px] font-bold tabular-nums">−$1,214.63</span></a></li>
+        </ul>
+      </section>
+      <section aria-label="Investments">
+        <h2 class="mb-1.5 flex justify-between px-1 text-[13px] font-semibold text-muted-foreground"><span>Investments</span><span class="tabular-nums">$42,310.88</span></h2>
+        <ul class="flex flex-col divide-y divide-border rounded-lg bg-card shadow-card">
+          <li><a href="#" class="flex min-h-[60px] items-center gap-3 px-4 py-2"><span class="flex size-10 items-center justify-center rounded-full bg-chart-5/12 text-chart-5"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg></span><span class="flex-1"><span class="block text-[16px] font-semibold">Fidelity 401(k)</span><span class="block text-[13px] text-muted-foreground">+2.4% this month</span></span><span class="text-[16px] font-bold tabular-nums">$42,310.88</span></a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="flex h-[34px] shrink-0 items-end justify-center pb-2" aria-hidden="true"><span class="h-[5px] w-[134px] rounded-full bg-foreground/80"></span></div>
+  </main>
+</body>
+</html>

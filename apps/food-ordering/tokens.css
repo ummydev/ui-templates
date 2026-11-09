@@ -1,0 +1,81 @@
+/*
+ * Pantry design system tokens, light and dark, as shadcn-style CSS variables.
+ * Full spec: DESIGN.md next to this file, or https://codexdesign.io/design-systems/pantry
+ * Light is the default; put class="dark" on <html> for the dark theme.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700&family=DM+Sans:wght@400;600&family=DM+Mono:wght@400&display=swap");
+
+:root {
+  --radius: 1.25rem;
+  --touch: 48px;
+  --screen-padding: 16px;
+  --tab-bar: 64px;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-heading: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+  --background: oklch(0.987 0.011 76.6);
+  --foreground: oklch(0.236 0.03 47.408);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.236 0.03 47.408);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.236 0.03 47.408);
+  --primary: oklch(0.557 0.186 32.439);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.949 0.032 68.938);
+  --secondary-foreground: oklch(0.376 0.106 38.332);
+  --muted: oklch(0.953 0.016 73.68);
+  --muted-foreground: oklch(0.492 0.031 57.773);
+  --accent: oklch(0.938 0.032 58.39);
+  --accent-foreground: oklch(0.236 0.03 47.408);
+  --destructive: oklch(0.498 0.181 24.025);
+  --border: oklch(0.922 0.023 71.776);
+  --input: oklch(0.887 0.028 70.916);
+  --ring: oklch(0.557 0.186 32.439);
+  --chart-1: oklch(0.557 0.186 32.439);
+  --chart-2: oklch(0.521 0.101 155.227);
+  --chart-3: oklch(0.712 0.144 71.642);
+  --chart-4: oklch(0.514 0.19 281.211);
+  --chart-5: oklch(0.601 0.143 359.388);
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.236 0.03 47.408);
+  --sidebar-primary: oklch(0.557 0.186 32.439);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.938 0.032 58.39);
+  --sidebar-accent-foreground: oklch(0.236 0.03 47.408);
+  --sidebar-border: oklch(0.922 0.023 71.776);
+  --sidebar-ring: oklch(0.557 0.186 32.439);
+}
+
+.dark {
+  --background: oklch(0.194 0.013 44.427);
+  --foreground: oklch(0.952 0.018 64.931);
+  --card: oklch(0.228 0.019 47.887);
+  --card-foreground: oklch(0.952 0.018 64.931);
+  --popover: oklch(0.228 0.019 47.887);
+  --popover-foreground: oklch(0.952 0.018 64.931);
+  --primary: oklch(0.706 0.188 32.864);
+  --primary-foreground: oklch(0.194 0.013 44.427);
+  --secondary: oklch(0.276 0.027 49.268);
+  --secondary-foreground: oklch(0.952 0.018 64.931);
+  --muted: oklch(0.255 0.02 50.045);
+  --muted-foreground: oklch(0.735 0.033 60.943);
+  --accent: oklch(0.287 0.025 47.844);
+  --accent-foreground: oklch(0.952 0.018 64.931);
+  --destructive: oklch(0.712 0.181 22.839);
+  --border: oklch(0.311 0.025 51.22);
+  --input: oklch(0.352 0.028 50.844);
+  --ring: oklch(0.706 0.188 32.864);
+  --chart-1: oklch(0.706 0.188 32.864);
+  --chart-2: oklch(0.733 0.124 157.835);
+  --chart-3: oklch(0.824 0.149 73.346);
+  --chart-4: oklch(0.683 0.174 284.179);
+  --chart-5: oklch(0.753 0.131 356.937);
+  --sidebar: oklch(0.228 0.019 47.887);
+  --sidebar-foreground: oklch(0.952 0.018 64.931);
+  --sidebar-primary: oklch(0.706 0.188 32.864);
+  --sidebar-primary-foreground: oklch(0.194 0.013 44.427);
+  --sidebar-accent: oklch(0.287 0.025 47.844);
+  --sidebar-accent-foreground: oklch(0.952 0.018 64.931);
+  --sidebar-border: oklch(0.311 0.025 51.22);
+  --sidebar-ring: oklch(0.706 0.188 32.864);
+}

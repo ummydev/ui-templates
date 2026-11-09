@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pinewood Schools · Tallywise</title>
+  <!-- Ledger design system: colours, fonts and radius. Dark is the default; remove class="dark" above for light. -->
+  <link rel="stylesheet" href="../tokens.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  <style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
+    @theme inline {
+      --color-background: var(--background);
+      --color-foreground: var(--foreground);
+      --color-card: var(--card);
+      --color-card-foreground: var(--card-foreground);
+      --color-popover: var(--popover);
+      --color-popover-foreground: var(--popover-foreground);
+      --color-primary: var(--primary);
+      --color-primary-foreground: var(--primary-foreground);
+      --color-secondary: var(--secondary);
+      --color-secondary-foreground: var(--secondary-foreground);
+      --color-muted: var(--muted);
+      --color-muted-foreground: var(--muted-foreground);
+      --color-accent: var(--accent);
+      --color-accent-foreground: var(--accent-foreground);
+      --color-destructive: var(--destructive);
+      --color-border: var(--border);
+      --color-input: var(--input);
+      --color-ring: var(--ring);
+      --color-chart-1: var(--chart-1);
+      --color-chart-2: var(--chart-2);
+      --color-chart-3: var(--chart-3);
+      --color-chart-4: var(--chart-4);
+      --color-chart-5: var(--chart-5);
+      --font-sans: var(--font-sans);
+      --font-mono: var(--font-mono);
+      --radius-sm: calc(var(--radius) - 2px);
+      --radius-md: var(--radius);
+      --radius-lg: calc(var(--radius) + 2px);
+      --spacing-touch: var(--touch);
+    }
+    @layer base {
+      body { @apply bg-background font-sans text-[14px] text-foreground antialiased; }
+    }
+  </style>
+</head>
+<body>
+  <div class="flex min-h-screen">
+    <aside class="hidden w-[232px] shrink-0 flex-col border-r border-border bg-card lg:flex">
+      <div class="flex h-14 items-center gap-2 border-b border-border px-4">
+        <svg class="size-6 text-primary" viewBox="0 0 24 24" aria-hidden="true"><rect width="24" height="24" rx="5" fill="currentColor"/><path d="M6 17V12M10 17V8M14 17V11M18 17V6" stroke="var(--primary-foreground)" stroke-width="2.2" stroke-linecap="round"/></svg><span class="text-[15px] font-semibold">Tallywise</span>
+      </div>
+      <button class="mx-3 mt-3 flex h-10 items-center gap-2 rounded-md border border-border px-3 text-left text-[13px] outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+        <span class="flex size-5 items-center justify-center rounded-sm bg-chart-2/20 font-mono text-[11px] text-chart-2">B</span>
+        <span class="flex-1 truncate">Brightline Forms</span><svg class="size-4 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+      <nav class="mt-4 px-3" aria-label="Main">
+        <ul class="flex flex-col gap-0.5 text-[14px]">
+          <li><a href="01-overview.html" class="flex h-9 items-center gap-2.5 rounded-md px-2.5 text-muted-foreground hover:text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"><svg class="size-4 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>Overview</a></li>
+          <li><a href="02-customers.html" class="flex h-9 items-center gap-2.5 rounded-md px-2.5 bg-accent font-semibold text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-current="page"><svg class="size-4 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>Customers</a></li>
+          <li><a href="04-revenue.html" class="flex h-9 items-center gap-2.5 rounded-md px-2.5 text-muted-foreground hover:text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"><svg class="size-4 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>Revenue</a></li>
+          <li><a href="05-invoices.html" class="flex h-9 items-center gap-2.5 rounded-md px-2.5 text-muted-foreground hover:text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"><svg class="size-4 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 16H8"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"/></svg>Invoices</a></li>
+          <li><a href="06-cohorts.html" class="flex h-9 items-center gap-2.5 rounded-md px-2.5 text-muted-foreground hover:text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"><svg class="size-4 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>Cohorts</a></li>
+          <li><a href="07-settings.html" class="flex h-9 items-center gap-2.5 rounded-md px-2.5 text-muted-foreground hover:text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"><svg class="size-4 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>Settings</a></li>
+        </ul>
+      </nav>
+      <div class="mt-auto border-t border-border p-3">
+        <div class="flex items-center gap-2.5 px-1 py-1 text-[13px]">
+          <span class="flex size-7 items-center justify-center rounded-full bg-chart-4/20 font-mono text-[11px] text-chart-4">DO</span>
+          <span class="flex-1"><span class="block font-semibold">Dana Okafor</span><span class="block text-[12px] text-muted-foreground">Owner</span></span>
+        </div>
+      </div>
+    </aside>
+    <div class="flex min-w-0 flex-1 flex-col">
+      <header class="sticky top-0 z-10 flex h-14 shrink-0 items-center gap-3 border-b border-border bg-background px-4 lg:px-6">
+        <details class="group lg:hidden">
+          <summary class="flex size-touch cursor-pointer list-none items-center justify-center rounded-md border border-border [&::-webkit-details-marker]:hidden outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background" aria-label="Menu">
+            <span class="group-open:hidden"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></span><span class="hidden group-open:block"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+          </summary>
+          <nav class="absolute inset-x-0 top-14 border-b border-border bg-card p-3" aria-label="Main">
+            <ul class="flex flex-col gap-0.5 text-[15px]">
+              <li><a href="01-overview.html" class="flex h-11 items-center gap-3 rounded-md px-3 text-muted-foreground"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>Overview</a></li>
+              <li><a href="02-customers.html" class="flex h-11 items-center gap-3 rounded-md px-3 bg-accent font-semibold"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>Customers</a></li>
+              <li><a href="04-revenue.html" class="flex h-11 items-center gap-3 rounded-md px-3 text-muted-foreground"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>Revenue</a></li>
+              <li><a href="05-invoices.html" class="flex h-11 items-center gap-3 rounded-md px-3 text-muted-foreground"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 16H8"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"/></svg>Invoices</a></li>
+              <li><a href="06-cohorts.html" class="flex h-11 items-center gap-3 rounded-md px-3 text-muted-foreground"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg>Cohorts</a></li>
+              <li><a href="07-settings.html" class="flex h-11 items-center gap-3 rounded-md px-3 text-muted-foreground"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg>Settings</a></li>
+            </ul>
+          </nav>
+        </details>
+        <h1 class="text-[18px] font-semibold tracking-[-0.01em]">Customers</h1>
+        <div class="ml-auto flex items-center gap-2">
+          <button class="inline-flex h-9 items-center gap-1.5 rounded-md px-3 text-[13px] font-semibold whitespace-nowrap border border-border bg-card outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>Open in Stripe</button>
+          <button class="hidden h-9 w-56 items-center gap-2 rounded-md border border-border bg-card px-3 text-[13px] text-muted-foreground md:flex outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>Search<kbd class="ml-auto rounded-sm border border-border px-1.5 font-mono text-[11px]">⌘K</kbd></button>
+        </div>
+      </header>
+      <main class="flex flex-col gap-4 p-4 lg:p-6">
+        <nav class="flex items-center gap-1 text-[13px] text-muted-foreground" aria-label="Breadcrumb"><a href="02-customers.html" class="hover:text-foreground">Customers</a><svg class="size-3.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg><span class="text-foreground">Pinewood Schools</span></nav>
+        <div class="flex flex-wrap items-center gap-4">
+          <span class="flex size-12 items-center justify-center rounded-md bg-chart-3/15 font-mono text-[16px] text-chart-3">PS</span>
+          <div class="flex-1">
+            <h2 class="text-[24px] leading-tight font-semibold tracking-[-0.01em]">Pinewood Schools</h2>
+            <p class="text-[13px] text-muted-foreground">School district · Portland, OR · billing@pinewood.k12.example · customer since Mar 4, 2024</p>
+          </div>
+          <span class="inline-flex items-center gap-1.5 text-[13px]"><span class="size-1.5 rounded-full bg-chart-3"></span>Active</span>
+        </div>
+        <div class="grid gap-4 xl:grid-cols-[1fr_1fr_1fr]">
+          <section class="rounded-md border border-border bg-card " aria-label="Subscription">
+          <div class="flex min-h-11 items-center justify-between gap-3 border-b border-border px-4">
+            <h2 class="text-[13px] font-semibold">Subscription</h2>
+          </div>
+          <dl class="grid grid-cols-2 gap-x-4 gap-y-3 p-4 text-[13px]">
+            <div><dt class="text-muted-foreground">Plan</dt><dd>Enterprise, 14 schools</dd></div>
+            <div><dt class="text-muted-foreground">MRR</dt><dd><span class="font-mono tabular-nums text-[18px] text-primary">$2,400</span></dd></div>
+            <div><dt class="text-muted-foreground">Billing</dt><dd>Monthly, by invoice</dd></div>
+            <div><dt class="text-muted-foreground">Renews</dt><dd>Mar 4, 2027</dd></div>
+            <div><dt class="text-muted-foreground">Lifetime revenue</dt><dd><span class="font-mono tabular-nums ">$40,590</span></dd></div>
+            <div><dt class="text-muted-foreground">Share of MRR</dt><dd><span class="font-mono tabular-nums ">3.8%</span></dd></div>
+          </dl>
+        </section>
+          <section class="rounded-md border border-border bg-card " aria-label="MRR history">
+          <div class="flex min-h-11 items-center justify-between gap-3 border-b border-border px-4">
+            <h2 class="text-[13px] font-semibold">MRR history</h2>
+          </div>
+          <div class="p-4">
+            <svg class="h-auto w-full" viewBox="0 0 300 120" role="img" aria-label="MRR went from $299 in March 2024 to $1,600 in January 2025 and $2,400 in August 2026">
+              <line x1="0" x2="300" y1="100" y2="100" stroke="var(--border)"/>
+              <path d="M8 96H86V48H236V16H292" fill="none" stroke="var(--primary)" stroke-width="2"/>
+              <circle cx="8" cy="96" r="3" fill="var(--primary)"/><circle cx="86" cy="48" r="3" fill="var(--primary)"/><circle cx="236" cy="16" r="3" fill="var(--primary)"/>
+            </svg>
+            <ol class="mt-3 flex flex-col gap-1.5 text-[13px]">
+              <li class="flex justify-between gap-3"><span class="text-muted-foreground">Mar 2024 · Scale</span><span class="font-mono tabular-nums ">$299</span></li>
+              <li class="flex justify-between gap-3"><span class="text-muted-foreground">Jan 2025 · Enterprise · 8 schools</span><span class="font-mono tabular-nums ">$1,600</span></li>
+              <li class="flex justify-between gap-3"><span class="text-muted-foreground">Aug 2026 · Enterprise · 14 schools</span><span class="font-mono tabular-nums ">$2,400</span></li>
+            </ol>
+          </div>
+        </section>
+          <section class="rounded-md border border-border bg-card " aria-label="Notes and activity">
+          <div class="flex min-h-11 items-center justify-between gap-3 border-b border-border px-4">
+            <h2 class="text-[13px] font-semibold">Notes and activity</h2><button class="text-[13px] text-muted-foreground hover:text-foreground outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background">Add note</button>
+          </div>
+          <ol class="flex flex-col p-4">
+            <li class="relative border-l border-border pb-4 pl-4 last:pb-0"><span class="absolute top-1 -left-[4px] size-2 rounded-full bg-muted-foreground"></span><p class="text-[12px] text-muted-foreground">Oct 14 · Priya Raman</p><p class="text-[13px]">Renewal call booked for Feb 2027. They want SSO before then.</p></li>
+            <li class="relative border-l border-border pb-4 pl-4 last:pb-0"><span class="absolute top-1 -left-[4px] size-2 rounded-full bg-muted-foreground"></span><p class="text-[12px] text-muted-foreground">Aug 1 · Tallywise</p><p class="text-[13px]">Expanded from 8 to 14 schools: +$800 MRR.</p></li>
+            <li class="relative border-l border-border pb-4 pl-4 last:pb-0"><span class="absolute top-1 -left-[4px] size-2 rounded-full bg-muted-foreground"></span><p class="text-[12px] text-muted-foreground">Jun 3 · Leo Brandt</p><p class="text-[13px]">Asked for a district-wide report template.</p></li>
+          </ol>
+        </section>
+        </div>
+        <section class="rounded-md border border-border bg-card " aria-label="Invoices">
+          <div class="flex min-h-11 items-center justify-between gap-3 border-b border-border px-4">
+            <h2 class="text-[13px] font-semibold">Invoices</h2><a href="05-invoices.html" class="text-[13px] text-muted-foreground hover:text-foreground">All invoices</a>
+          </div>
+          <div class="overflow-x-auto"><table class="w-full min-w-[560px] text-[13px]">
+            <thead class="border-b border-border text-left text-[12px] text-muted-foreground"><tr><th class="h-10 px-4 font-normal">Invoice</th><th class="px-4 font-normal">Date</th><th class="px-4 text-right font-normal">Amount</th><th class="px-4 font-normal">Status</th></tr></thead>
+            <tbody>
+              <tr tabindex="0" class="border-b border-border last:border-0 hover:bg-accent focus-visible:bg-accent focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring"><td class="h-10 px-4"><span class="font-mono tabular-nums ">INV-2026-1184</span></td><td class="px-4 text-muted-foreground">Nov 1, 2026</td><td class="px-4 text-right"><span class="font-mono tabular-nums ">$2,400.00</span></td><td class="px-4"><span class="inline-flex items-center gap-1.5 text-[13px]"><span class="size-1.5 rounded-full bg-chart-2"></span>Open</span></td></tr>
+              <tr tabindex="0" class="border-b border-border last:border-0 hover:bg-accent focus-visible:bg-accent focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring"><td class="h-10 px-4"><span class="font-mono tabular-nums ">INV-2026-1051</span></td><td class="px-4 text-muted-foreground">Oct 1, 2026</td><td class="px-4 text-right"><span class="font-mono tabular-nums ">$2,400.00</span></td><td class="px-4"><span class="inline-flex items-center gap-1.5 text-[13px]"><span class="size-1.5 rounded-full bg-chart-3"></span>Paid</span></td></tr>
+              <tr tabindex="0" class="border-b border-border last:border-0 hover:bg-accent focus-visible:bg-accent focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring"><td class="h-10 px-4"><span class="font-mono tabular-nums ">INV-2026-0927</span></td><td class="px-4 text-muted-foreground">Sep 1, 2026</td><td class="px-4 text-right"><span class="font-mono tabular-nums ">$2,400.00</span></td><td class="px-4"><span class="inline-flex items-center gap-1.5 text-[13px]"><span class="size-1.5 rounded-full bg-chart-3"></span>Paid</span></td></tr>
+              <tr tabindex="0" class="border-b border-border last:border-0 hover:bg-accent focus-visible:bg-accent focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ring"><td class="h-10 px-4"><span class="font-mono tabular-nums ">INV-2026-0806</span></td><td class="px-4 text-muted-foreground">Aug 1, 2026</td><td class="px-4 text-right"><span class="font-mono tabular-nums ">$2,400.00</span></td><td class="px-4"><span class="inline-flex items-center gap-1.5 text-[13px]"><span class="size-1.5 rounded-full bg-chart-3"></span>Paid</span></td></tr>
+            </tbody>
+          </table></div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

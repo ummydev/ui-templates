@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cart · Pantry</title>
+  <!-- Pantry design system: colours, fonts and radius. Add class="dark" to <html> for the dark theme. -->
+  <link rel="stylesheet" href="../tokens.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  <style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
+    @theme inline {
+      --color-background: var(--background);
+      --color-foreground: var(--foreground);
+      --color-card: var(--card);
+      --color-card-foreground: var(--card-foreground);
+      --color-popover: var(--popover);
+      --color-popover-foreground: var(--popover-foreground);
+      --color-primary: var(--primary);
+      --color-primary-foreground: var(--primary-foreground);
+      --color-secondary: var(--secondary);
+      --color-secondary-foreground: var(--secondary-foreground);
+      --color-muted: var(--muted);
+      --color-muted-foreground: var(--muted-foreground);
+      --color-accent: var(--accent);
+      --color-accent-foreground: var(--accent-foreground);
+      --color-destructive: var(--destructive);
+      --color-border: var(--border);
+      --color-input: var(--input);
+      --color-ring: var(--ring);
+      --color-chart-1: var(--chart-1);
+      --color-chart-2: var(--chart-2);
+      --color-chart-3: var(--chart-3);
+      --color-chart-4: var(--chart-4);
+      --color-chart-5: var(--chart-5);
+      --font-sans: var(--font-sans);
+      --font-heading: var(--font-heading);
+      --radius-sm: calc(var(--radius) - 8px);
+      --radius-md: calc(var(--radius) - 6px);
+      --radius-lg: var(--radius);
+      --spacing-touch: var(--touch);
+      --spacing-screen: var(--screen-padding);
+      --spacing-tab-bar: var(--tab-bar);
+      /* Soft and low, for floating elements only: the cart bar and buttons over images. */
+      --shadow-float: 0 8px 24px -10px oklch(0.236 0.03 47.408 / 0.35);
+    }
+    @layer base {
+      body { @apply bg-background font-sans text-foreground antialiased; }
+    }
+  </style>
+</head>
+<body>
+  <main class="relative mx-auto flex h-[844px] w-[390px] flex-col overflow-hidden bg-background">
+    <div class="flex h-12 shrink-0 items-center justify-between px-8 pt-2 text-[15px] font-semibold">
+      <span class="tabular-nums">9:41</span>
+      <span class="flex items-center gap-1.5" aria-hidden="true">
+        <svg class="h-3 w-[18px]" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+        <svg class="h-3 w-4" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.2-1.3A10.4 10.4 0 0 0 8 .5 10.4 10.4 0 0 0 .8 3.3L2 4.6a8.6 8.6 0 0 1 6-2.4Zm0 3.6c1.3 0 2.5.5 3.4 1.3l1.2-1.3A6.6 6.6 0 0 0 8 4a6.6 6.6 0 0 0-4.6 1.8l1.2 1.3c.9-.8 2.1-1.3 3.4-1.3Zm0 3.5c.5 0 .9.2 1.2.5L8 11.2 6.8 9.8c.3-.3.7-.5 1.2-.5Z"/></svg>
+        <svg class="h-3 w-[26px]" viewBox="0 0 26 12" fill="none"><rect x=".5" y=".5" width="22" height="11" rx="3" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="16" height="8" rx="1.8" fill="currentColor"/><path d="M24 4v4a2 2 0 0 0 0-4Z" fill="currentColor" opacity=".4"/></svg>
+      </span>
+    </div>
+    <header class="flex shrink-0 items-center gap-1 px-2 pb-2">
+      <a href="02-restaurant.html" class="flex size-touch items-center justify-center rounded-full" aria-label="Back"><svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></a>
+      <div class="flex-1 pr-touch text-center">
+        <h1 class="font-heading text-[22px] leading-tight font-bold">Your cart</h1>
+        <p class="text-[13px] text-muted-foreground">Luca's Wood-Fired Pizza</p>
+      </div>
+    </header>
+    <div class="flex flex-1 flex-col gap-4 overflow-hidden px-screen pt-1">
+      <ul class="flex flex-col divide-y divide-border rounded-lg bg-card px-4" aria-label="Items">
+        <li class="flex items-center gap-3 py-3">
+          <span class="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-md bg-secondary"><img src="../assets/food/pizza-margherita.svg" alt="Margherita" class="size-[72px]"></span>
+          <span class="min-w-0 flex-1">
+            <span class="block text-[16px] font-semibold">Margherita</span>
+            <span class="block truncate text-[13px] text-muted-foreground">12" Regular · Mild chili · Hot honey</span>
+            <span class="mt-0.5 block font-heading text-[16px] font-bold tabular-nums">$17.50</span>
+          </span>
+          <span class="flex h-10 items-center rounded-full border border-input">
+            <button class="flex h-10 w-9 items-center justify-center" aria-label="One less Margherita"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+            <span class="w-4 text-center text-[15px] font-semibold tabular-nums">1</span>
+            <button class="flex h-10 w-9 items-center justify-center" aria-label="One more Margherita"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+          </span>
+        </li>
+        <li class="flex items-center gap-3 py-3">
+          <span class="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-md bg-secondary"><img src="../assets/food/garlic-knots.svg" alt="Garlic knots" class="size-[72px]"></span>
+          <span class="min-w-0 flex-1">
+            <span class="block text-[16px] font-semibold">Garlic knots</span>
+            <span class="block truncate text-[13px] text-muted-foreground">6 pieces · Marinara dip</span>
+            <span class="mt-0.5 block font-heading text-[16px] font-bold tabular-nums">$7.00</span>
+          </span>
+          <span class="flex h-10 items-center rounded-full border border-input">
+            <button class="flex h-10 w-9 items-center justify-center" aria-label="One less Garlic knots"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+            <span class="w-4 text-center text-[15px] font-semibold tabular-nums">1</span>
+            <button class="flex h-10 w-9 items-center justify-center" aria-label="One more Garlic knots"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+          </span>
+        </li>
+        <li class="flex items-center gap-3 py-3">
+          <span class="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-md bg-secondary"><img src="../assets/food/tiramisu.svg" alt="Tiramisu" class="size-[72px]"></span>
+          <span class="min-w-0 flex-1">
+            <span class="block text-[16px] font-semibold">Tiramisu</span>
+            <span class="block truncate text-[13px] text-muted-foreground">Mascarpone, espresso, cocoa</span>
+            <span class="mt-0.5 block font-heading text-[16px] font-bold tabular-nums">$9.00</span>
+          </span>
+          <span class="flex h-10 items-center rounded-full border border-input">
+            <button class="flex h-10 w-9 items-center justify-center" aria-label="One less Tiramisu"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+            <span class="w-4 text-center text-[15px] font-semibold tabular-nums">1</span>
+            <button class="flex h-10 w-9 items-center justify-center" aria-label="One more Tiramisu"><svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg></button>
+          </span>
+        </li>
+      </ul>
+      <label class="flex min-h-touch items-center gap-3 rounded-lg bg-card px-4 py-3">
+        <span class="text-muted-foreground"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 9a2.4 2.4 0 0 0-.706-1.706l-3.588-3.588A2.4 2.4 0 0 0 15 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"/><path d="M15 3v5a1 1 0 0 0 1 1h5"/></svg></span>
+        <span class="flex-1">
+          <span class="block text-[13px] text-muted-foreground">Note for the restaurant</span>
+          <span class="block text-[15px]">Extra napkins, please.</span>
+        </span>
+        <svg class="size-4 text-muted-foreground" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg>
+      </label>
+      <div class="flex min-h-touch items-center gap-3 rounded-lg border border-dashed border-chart-2 bg-chart-2/10 px-4 py-3">
+        <span class="text-chart-2"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 1 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 1 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M9 9h.01"/><path d="m15 9-6 6"/><path d="M15 15h.01"/></svg></span>
+        <span class="flex-1">
+          <span class="block text-[15px] font-semibold">FIRST3 applied</span>
+          <span class="block text-[13px] text-muted-foreground">Free delivery · 2 of 3 orders left</span>
+        </span>
+        <span class="text-chart-2"><svg class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg></span>
+      </div>
+      <dl class="flex flex-col gap-2 text-[15px]">
+        <div class="flex justify-between "><dt>Subtotal</dt><dd class="tabular-nums">$33.50</dd></div>
+        <div class="flex justify-between "><dt>Delivery fee</dt><dd class="tabular-nums"><s class="mr-1.5 text-muted-foreground">$1.99</s><span class="font-semibold text-chart-2">Free</span></dd></div>
+        <div class="flex justify-between "><dt>Service fee</dt><dd class="tabular-nums">$2.35</dd></div>
+        <div class="flex justify-between "><dt>Tax</dt><dd class="tabular-nums">$2.97</dd></div>
+        <div class="flex justify-between mt-1 border-t border-border pt-3 font-heading text-[19px] font-bold"><dt>Total</dt><dd class="tabular-nums">$38.82</dd></div>
+      </dl>
+    </div>
+    <div class="shrink-0 px-screen pt-3">
+      <a href="05-checkout.html" class="flex h-14 items-center justify-between rounded-full bg-primary px-6 text-[17px] font-semibold text-primary-foreground">Go to checkout <span class="tabular-nums">$38.82</span></a>
+      <div class="flex h-[34px] shrink-0 items-end justify-center pb-2" aria-hidden="true"><span class="h-[5px] w-[134px] rounded-full bg-foreground/80"></span></div>
+    </div>
+  </main>
+</body>
+</html>

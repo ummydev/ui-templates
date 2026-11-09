@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Breathe · Stillpoint</title>
+  <!-- Calm design system: colours, fonts and radius. Add class="dark" to <html> for the dark theme. -->
+  <link rel="stylesheet" href="../tokens.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.11"></script>
+  <style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
+    @theme inline {
+      --color-background: var(--background);
+      --color-foreground: var(--foreground);
+      --color-card: var(--card);
+      --color-card-foreground: var(--card-foreground);
+      --color-popover: var(--popover);
+      --color-popover-foreground: var(--popover-foreground);
+      --color-primary: var(--primary);
+      --color-primary-foreground: var(--primary-foreground);
+      --color-secondary: var(--secondary);
+      --color-secondary-foreground: var(--secondary-foreground);
+      --color-muted: var(--muted);
+      --color-muted-foreground: var(--muted-foreground);
+      --color-accent: var(--accent);
+      --color-accent-foreground: var(--accent-foreground);
+      --color-destructive: var(--destructive);
+      --color-border: var(--border);
+      --color-input: var(--input);
+      --color-ring: var(--ring);
+      --color-chart-1: var(--chart-1);
+      --color-chart-2: var(--chart-2);
+      --color-chart-3: var(--chart-3);
+      --color-chart-4: var(--chart-4);
+      --color-chart-5: var(--chart-5);
+      --font-sans: var(--font-sans);
+      --font-heading: var(--font-heading);
+      --radius-sm: calc(var(--radius) - 12px);
+      --radius-md: calc(var(--radius) - 8px);
+      --radius-lg: var(--radius);
+      --spacing-touch: var(--touch);
+      --spacing-screen: var(--screen-padding);
+      --spacing-tab-bar: var(--tab-bar);
+      /* Very soft, and only on sheets. */
+      --shadow-sheet: 0 -8px 32px -16px oklch(0.25 0.02 155 / 0.3);
+    }
+    @layer base {
+      body { @apply bg-background font-sans text-foreground antialiased; }
+    }
+  </style>
+</head>
+<body>
+  <style>
+    @keyframes breathe {
+      0% { transform: scale(0.62); }
+      28.6% { transform: scale(1); }
+      57.1% { transform: scale(1); }
+      100% { transform: scale(0.62); }
+    }
+    .breath { animation: breathe 14s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) { .breath { animation: none; transform: scale(0.82); } }
+  </style>
+  <main class="relative mx-auto flex h-[844px] w-[390px] flex-col overflow-hidden bg-background">
+    <div class="flex h-12 shrink-0 items-center justify-between px-8 pt-2 text-[15px] font-semibold">
+      <span class="tabular-nums">9:41</span>
+      <span class="flex items-center gap-1.5" aria-hidden="true">
+        <svg class="h-3 w-[18px]" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="1"/><rect x="5" y="5.5" width="3" height="6.5" rx="1"/><rect x="10" y="3" width="3" height="9" rx="1"/><rect x="15" y="0" width="3" height="12" rx="1"/></svg>
+        <svg class="h-3 w-4" viewBox="0 0 16 12" fill="currentColor"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.2-1.3A10.4 10.4 0 0 0 8 .5 10.4 10.4 0 0 0 .8 3.3L2 4.6a8.6 8.6 0 0 1 6-2.4Zm0 3.6c1.3 0 2.5.5 3.4 1.3l1.2-1.3A6.6 6.6 0 0 0 8 4a6.6 6.6 0 0 0-4.6 1.8l1.2 1.3c.9-.8 2.1-1.3 3.4-1.3Zm0 3.5c.5 0 .9.2 1.2.5L8 11.2 6.8 9.8c.3-.3.7-.5 1.2-.5Z"/></svg>
+        <svg class="h-3 w-[26px]" viewBox="0 0 26 12" fill="none"><rect x=".5" y=".5" width="22" height="11" rx="3" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="16" height="8" rx="1.8" fill="currentColor"/><path d="M24 4v4a2 2 0 0 0 0-4Z" fill="currentColor" opacity=".4"/></svg>
+      </span>
+    </div>
+    <header class="flex shrink-0 items-center justify-between px-2">
+      <a href="02-explore.html" class="flex size-touch items-center justify-center rounded-full" aria-label="Close"><svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></a>
+      <p class="text-[15px] font-semibold">4-4-6 breathing</p>
+      <span class="size-touch"></span>
+    </header>
+    <div class="flex flex-1 flex-col items-center overflow-hidden px-screen pt-4">
+      <p class="text-[14px] text-muted-foreground tabular-nums">Round 3 of 21</p>
+      <div class="relative mt-8 flex size-[280px] items-center justify-center">
+        <span class="absolute inset-0 rounded-full border border-border"></span>
+        <span class="breath absolute inset-0 rounded-full bg-secondary"></span>
+        <span class="breath absolute inset-8 rounded-full bg-chart-5/40"></span>
+        <span class="relative flex flex-col items-center">
+          <span class="font-heading text-[40px] leading-none font-medium">Breathe in</span>
+          <span class="mt-2 text-[15px] text-foreground/80">through the nose</span>
+        </span>
+      </div>
+      <ol class="mt-8 grid w-full grid-cols-3 gap-2 text-center" aria-label="Rhythm">
+        <li class="rounded-md bg-primary py-3 text-primary-foreground" aria-current="step"><span class="block text-[22px] font-semibold tabular-nums">4s</span><span class="text-[13px]">Inhale</span></li>
+        <li class="rounded-md bg-card py-3"><span class="block text-[22px] font-semibold tabular-nums">4s</span><span class="text-[13px] text-muted-foreground">Hold</span></li>
+        <li class="rounded-md bg-card py-3"><span class="block text-[22px] font-semibold tabular-nums">6s</span><span class="text-[13px] text-muted-foreground">Exhale</span></li>
+      </ol>
+      <div class="mt-6 w-full">
+        <p class="mb-2 text-[14px] font-semibold">Length</p>
+        <div class="grid grid-cols-3 gap-2" role="radiogroup" aria-label="Length">
+          <button role="radio" aria-checked="false" class="h-touch rounded-full text-[15px] font-semibold border border-border">2 min</button>
+          <button role="radio" aria-checked="true" class="h-touch rounded-full text-[15px] font-semibold bg-foreground text-background">5 min</button>
+          <button role="radio" aria-checked="false" class="h-touch rounded-full text-[15px] font-semibold border border-border">10 min</button>
+        </div>
+      </div>
+      <label class="mt-4 flex h-touch w-full items-center justify-between">
+        <span class="text-[15px]">Animation<span class="block text-[13px] text-muted-foreground">Off when your device asks for less motion</span></span>
+        <span class="flex h-8 w-14 items-center justify-end rounded-full bg-primary p-1"><span class="size-6 rounded-full bg-primary-foreground"></span></span>
+        <input type="checkbox" class="sr-only" checked>
+      </label>
+    </div>
+    <div class="flex h-[34px] shrink-0 items-end justify-center pb-2" aria-hidden="true"><span class="h-[5px] w-[134px] rounded-full bg-foreground/70"></span></div>
+  </main>
+</body>
+</html>
