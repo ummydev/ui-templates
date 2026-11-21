@@ -68,19 +68,19 @@
     --muted-foreground: oklch(0.5 0.012 60);
     --accent: oklch(0.93 0.045 55);
     --accent-foreground: oklch(0.45 0.13 45);
-    --destructive: oklch(0.55 0.19 28);
+    --destructive: oklch(0.5 0.19 28);
     --border: oklch(0.24 0.012 60 / 9%);
     --input: oklch(0.24 0.012 60 / 14%);
     --ring: oklch(0.66 0.17 45 / 50%);
-    --chart-1: oklch(0.66 0.17 45);
+    --chart-1: oklch(0.57 0.17 42);
     --chart-2: oklch(0.72 0.1 230);
     --chart-3: oklch(0.78 0.12 130);
     --chart-4: oklch(0.72 0.1 300);
     --chart-5: oklch(0.82 0.1 85);
-    --kiln: oklch(0.66 0.17 45);
+    --kiln: oklch(0.57 0.17 42);
     --kiln-ink: oklch(0.5 0.15 42);
-    --ok: oklch(0.55 0.12 150);
-    --risk: oklch(0.55 0.19 28);
+    --ok: oklch(0.48 0.12 150);
+    --risk: oklch(0.5 0.19 28);
     /* Project colors: a soft fill and a strong tone for each. */
     --p-sky: oklch(0.9 0.05 230);
     --p-sky-ink: oklch(0.45 0.1 235);

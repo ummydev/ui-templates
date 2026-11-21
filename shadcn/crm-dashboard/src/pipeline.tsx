@@ -40,7 +40,7 @@ export function Pipeline() {
         <div className="flex items-end justify-between">
           <div>
             <h1 className="text-[24px] font-semibold tracking-[-0.02em]">Pipeline</h1>
-            <p className="mt-1 text-[13px] text-muted-foreground">Every open deal by stage. Drag a card to move it.</p>
+            <p className="mt-1 text-[13px] text-muted-foreground">Every open deal by stage, with its next step.</p>
           </div>
           <div className="flex rounded-lg border border-border bg-card p-0.5 text-[12.5px]">
             <span className="flex h-7 items-center gap-1.5 rounded-md bg-secondary px-2.5 font-medium">

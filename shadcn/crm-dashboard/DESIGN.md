@@ -15,6 +15,8 @@ A focused CRM look for people who live in tables: cool paper, navy ink, one coba
 | `--tone-1…4` | pale cobalt / rose / mint / sand | Teammate avatars (one tone per person, always the same) |
 | `--chart-1…3` | cobalt → light blue | Pipeline stages, darkest = closest to closing |
 
+Every text color passes WCAG AA (4.5:1) on the surface it sits on.
+
 ## Type
 - Geist Variable for everything. Page title 24px / semibold / -0.02em. Table and body 13px. Labels 12–12.5px muted.
 - Numbers use `.num` (tabular figures) so columns line up. IDs, shortcuts and record numbers use `.code` (Geist Mono).

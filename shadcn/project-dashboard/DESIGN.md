@@ -9,10 +9,12 @@ A warm, friendly look for project management: bone paper, charcoal ink, one kiln
 | `--sidebar` | `oklch(0.94 0.01 78)` warm stone | The frame and sidebar around the content |
 | `--card` | `oklch(0.995 0.003 85)` | Cards (`.card-k`), table, task cards |
 | `--foreground` / `--primary` | `oklch(0.24 0.012 60)` charcoal | Text, the one dark "Needs attention" card, active tab underline |
-| `--kiln` | `oklch(0.66 0.17 45)` | Main action buttons, the today line, logo. Never for text on white |
+| `--kiln` | `oklch(0.57 0.17 42)` | Main action buttons (white text, 4.8:1), the today line, logo |
 | `--kiln-ink` / `--accent-foreground` | darker orange | Orange text (today's date, counts, "At risk") |
 | `--ok` / `--risk` | green / red | "On track", "Behind", over-capacity hours, late tasks |
 | `--p-{clay,sky,lime,lilac,sand}` and `-ink` | soft fill + strong tone | One per project: timeline bars, project tiles, sidebar dots, progress bars. Text on a fill uses the matching `-ink` |
+
+Every text color passes WCAG AA (4.5:1) on the surface it sits on.
 
 ## Type
 - Manrope Variable for everything; Geist Mono (`.code`) for task and project keys such as `HAL-52`.
