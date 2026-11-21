@@ -141,7 +141,7 @@ export function Overview() {
               width={300}
               height={200}
               layout="vertical"
-              data={countries.filter((c) => c.code !== '··').map((c) => ({ ...c, visitors: Math.round(c.share * totals.visitors) }))}
+              data={countries.filter((c) => c.code !== '··')}
               margin={{ top: 14, right: 40, left: 0, bottom: 0 }}
             >
               <XAxis type="number" hide />
@@ -157,7 +157,7 @@ export function Overview() {
             </BarChart>
             <div className="num mt-1 flex justify-between border-t border-border pt-3 text-[12.5px] text-muted-foreground">
               <span>Other countries</span>
-              <span>{fmt(Math.round(countries[countries.length - 1].share * totals.visitors))}</span>
+              <span>{fmt(countries[countries.length - 1].visitors)}</span>
             </div>
           </section>
         </div>

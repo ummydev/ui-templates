@@ -54,10 +54,15 @@ export const countries = [
   { name: 'United States', code: 'US', share: 0.46 },
   { name: 'Canada', code: 'CA', share: 0.17 },
   { name: 'United Kingdom', code: 'GB', share: 0.12 },
-  { name: 'Germany', code: 'DE', share: 0.09 },
+  { name: 'Germany', code: 'DE', share: 0.1 },
   { name: 'Australia', code: 'AU', share: 0.07 },
-  { name: 'Other', code: '··', share: 0.09 },
-];
+  { name: 'Other', code: '··', share: 0.08 },
+].map((c, i, all) => ({
+  ...c,
+  // Visitors per country; "Other" takes the rounding remainder so the list adds up to the total.
+  visitors:
+    i === all.length - 1 ? totals.visitors - all.slice(0, -1).reduce((s, x) => s + Math.round(x.share * totals.visitors), 0) : Math.round(c.share * totals.visitors),
+}));
 
 export const live = { now: 42, pages: [{ path: '/products/ridgeline-2p-tent', n: 9 }, { path: '/collections/jackets', n: 7 }, { path: '/', n: 6 }] };
 
