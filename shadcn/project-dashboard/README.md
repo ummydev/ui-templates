@@ -1,5 +1,7 @@
 # Kiln: project management dashboard template (shadcn/ui + Tailwind)
 
+Live preview and details: [codexdesign.io/templates/project-management-dashboard](https://codexdesign.io/templates/project-management-dashboard)
+
 A project management dashboard for a small studio, with three screens: an overview with KPIs, this week's schedule, team workload, projects and deadlines; a kanban task board; and a twelve-week timeline (Gantt chart) with phases and milestones. Built with React, shadcn/ui, Tailwind CSS v4 and Lucide icons. The design system is in [DESIGN.md](DESIGN.md) and the theme tokens in `src/index.css`.
 
 ![Overview](screenshots/overview.png)
