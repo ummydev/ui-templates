@@ -1,5 +1,7 @@
 # Tideline: CRM dashboard template (shadcn/ui + Tailwind)
 
+Live preview and details: [codexdesign.io/templates/crm-dashboard](https://codexdesign.io/templates/crm-dashboard)
+
 A sales CRM admin dashboard with three screens: a leads table with KPIs, tabs, filters and bulk actions; a pipeline board with stage totals and a weighted forecast; and a lead record page with an activity timeline, deal progress, tasks and the buying committee. Built with React, shadcn/ui, Tailwind CSS v4 and Lucide icons. The design system is in [DESIGN.md](DESIGN.md) and the theme tokens in `src/index.css`.
 
 ![Leads screen](screenshots/leads.png)
