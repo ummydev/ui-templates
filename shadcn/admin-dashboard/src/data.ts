@@ -139,3 +139,63 @@ export const fmt = (n: number) => n.toLocaleString('en-US');
 export const usd = (n: number, cents = false) => `$${n.toLocaleString('en-US', { minimumFractionDigits: cents ? 2 : 0, maximumFractionDigits: cents ? 2 : 0 })}`;
 export const pct = (n: number, d = 1) => `${(n * 100).toFixed(d)}%`;
 export const signed = (n: number) => `${n >= 0 ? '+' : '−'}${Math.abs(n * 100).toFixed(1)}%`;
+
+// Staff accounts for the store admin. Role and status counts on the Users and Roles screens are computed from this list.
+export type Role = 'Owner' | 'Admin' | 'Manager' | 'Support' | 'Analyst';
+export type UserStatus = 'Active' | 'Invited' | 'Suspended';
+export interface StaffUser {
+  name: string;
+  email: string;
+  role: Role;
+  status: UserStatus;
+  lastActive: string;
+  twoFactor: boolean;
+  team: string;
+  selected?: boolean;
+}
+
+export const users: StaffUser[] = [
+  { name: 'Noor Haddad', email: 'noor@kestrel.example', role: 'Owner', status: 'Active', lastActive: 'Now', twoFactor: true, team: 'Growth' },
+  { name: 'Ben Archer', email: 'ben@kestrel.example', role: 'Admin', status: 'Active', lastActive: '12 min ago', twoFactor: true, team: 'Operations' },
+  { name: 'Carla Duarte', email: 'carla@kestrel.example', role: 'Manager', status: 'Active', lastActive: '1 h ago', twoFactor: true, team: 'Merchandising' },
+  { name: 'Felix Wong', email: 'felix@kestrel.example', role: 'Manager', status: 'Active', lastActive: '3 h ago', twoFactor: false, team: 'Fulfilment', selected: true },
+  { name: 'Ines Kovac', email: 'ines@kestrel.example', role: 'Support', status: 'Active', lastActive: '5 min ago', twoFactor: true, team: 'Customer care' },
+  { name: 'Jamal Ortiz', email: 'jamal@kestrel.example', role: 'Support', status: 'Active', lastActive: '26 min ago', twoFactor: false, team: 'Customer care', selected: true },
+  { name: 'Kira Sato', email: 'kira@kestrel.example', role: 'Support', status: 'Invited', lastActive: 'Invite sent Nov 20', twoFactor: false, team: 'Customer care' },
+  { name: 'Liam Novak', email: 'liam@kestrel.example', role: 'Analyst', status: 'Active', lastActive: 'Yesterday', twoFactor: true, team: 'Growth' },
+  { name: 'Mei Tanaka', email: 'mei@kestrel.example', role: 'Analyst', status: 'Active', lastActive: 'Nov 19', twoFactor: true, team: 'Finance' },
+  { name: 'Omar Fadel', email: 'omar@kestrel.example', role: 'Manager', status: 'Suspended', lastActive: 'Oct 30', twoFactor: false, team: 'Fulfilment', selected: true },
+  { name: 'Rosa Lind', email: 'rosa@kestrel.example', role: 'Support', status: 'Invited', lastActive: 'Invite sent Nov 21', twoFactor: false, team: 'Customer care' },
+];
+
+export const roleOrder: Role[] = ['Owner', 'Admin', 'Manager', 'Support', 'Analyst'];
+export const roleCount = (r: Role) => users.filter((u) => u.role === r).length;
+export const statusCount = (s: UserStatus) => users.filter((u) => u.status === s).length;
+export const without2fa = users.filter((u) => u.status === 'Active' && !u.twoFactor).length;
+
+export const roleInfo: Record<Role, string> = {
+  Owner: 'Everything, including billing and deleting the store',
+  Admin: 'Everything except billing and ownership',
+  Manager: 'Runs products, orders and fulfilment',
+  Support: 'Helps customers: orders, refunds up to a limit',
+  Analyst: 'Reads reports and exports, changes nothing',
+};
+
+// What each role may do. 'full' = view + edit, 'view' = read only, 'none' = hidden.
+export type Access = 'full' | 'view' | 'none';
+export const resources = ['Orders', 'Refunds', 'Products', 'Customers', 'Discounts', 'Reports', 'Users & roles', 'Billing'] as const;
+export const permissions: Record<Role, Record<(typeof resources)[number], Access>> = {
+  Owner: { Orders: 'full', Refunds: 'full', Products: 'full', Customers: 'full', Discounts: 'full', Reports: 'full', 'Users & roles': 'full', Billing: 'full' },
+  Admin: { Orders: 'full', Refunds: 'full', Products: 'full', Customers: 'full', Discounts: 'full', Reports: 'full', 'Users & roles': 'full', Billing: 'view' },
+  Manager: { Orders: 'full', Refunds: 'full', Products: 'full', Customers: 'view', Discounts: 'full', Reports: 'view', 'Users & roles': 'none', Billing: 'none' },
+  Support: { Orders: 'full', Refunds: 'full', Products: 'view', Customers: 'full', Discounts: 'view', Reports: 'none', 'Users & roles': 'none', Billing: 'none' },
+  Analyst: { Orders: 'view', Refunds: 'view', Products: 'view', Customers: 'view', Discounts: 'view', Reports: 'full', 'Users & roles': 'none', Billing: 'none' },
+};
+
+export const audit = [
+  { who: 'Ben Archer', what: 'changed Support refunds limit to $150', when: '10:04' },
+  { who: 'Noor Haddad', what: 'invited Rosa Lind as Support', when: '09:31' },
+  { who: 'Ben Archer', what: 'suspended Omar Fadel', when: 'Nov 20, 18:12' },
+  { who: 'Carla Duarte', what: 'gave Managers edit access to Discounts', when: 'Nov 20, 11:40' },
+  { who: 'Noor Haddad', what: 'turned on required 2FA for Admins', when: 'Nov 18, 16:05' },
+];

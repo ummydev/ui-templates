@@ -1,6 +1,6 @@
 # Vantage design system
 
-A dark analytics look for people who watch numbers all day: graphite night, one signal-lime accent, cyan as the second series, and monospaced figures that line up. Built for admin and analytics dashboards.
+A dark analytics look for people who watch numbers all day: graphite night, one signal-lime accent, cyan as the second series, and monospaced figures that line up. Built for admin dashboards and admin panels: analytics, orders, reports, users and roles.
 
 ## Colors (shadcn tokens in `src/index.css`)
 | Token | Value | Use |
@@ -28,10 +28,12 @@ Every text color passes WCAG AA (4.5:1) on the surface it sits on. Heatmap cells
 - Charts: no axis lines, faint horizontal grid only, lime area with a fading fill, a dashed cyan line for the second series.
 
 ## Patterns
-- Shell: 220px sidebar (store switcher, nav with a pending-orders badge, settings, user), 72px top bar (page title, ⌘K search, date range, notifications, the page's main action).
+- Shell: 220px sidebar (store switcher, nav with a pending-orders badge, an Admin section for users and roles, settings, user), 72px top bar (page title, ⌘K search, date range, notifications, the page's main action).
 - Overview: four KPI tiles (value, delta vs previous period, sparkline), traffic-and-orders area chart with a live-visitors chip, visitors by channel bars, top pages table with bounce bars, top countries bar chart.
 - Orders: status tabs with counts, an orders table, and an order detail panel with customer, line items, subtotal, shipping, tax and total, plus Refund and Fulfil actions.
 - Reports: a five-step conversion funnel with step-to-step rates, a cohort repeat-purchase heatmap, and revenue by category.
+- Users: four account stats (including active users without 2FA), role filter chips with counts, a staff table (role badge, team, status dot, 2FA, last active), selected rows and a floating bulk-action bar.
+- Roles & permissions: the role list with user counts and a one-line scope each, a permission matrix (Edit / View / No access for every area and role, the selected role outlined in lime), and an audit log.
 
 ## Data
-Everything is read from `src/data.ts`. Daily visitors, orders and revenue are generated from a fixed formula, and the KPIs, deltas, channel and country splits, funnel ends (sessions = visitors, purchases = orders), the "All" order count and each order's totals are computed from them. The previous-period totals, status counts other than "All" and "Fulfilled", the middle funnel rates, top pages and cohort percentages are set by hand in the same file.
+Everything is read from `src/data.ts`. Daily visitors, orders and revenue are generated from a fixed formula, and the KPIs, deltas, channel and country splits, funnel ends (sessions = visitors, purchases = orders), the "All" order count and each order's totals are computed from them. On the admin screens, every user, role and status count and the "can edit N of 8 areas" line are computed from the `users` and `permissions` lists. The previous-period totals, status counts other than "All" and "Fulfilled", the middle funnel rates, top pages and cohort percentages are set by hand in the same file.

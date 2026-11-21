@@ -1,8 +1,10 @@
 import { Orders } from './orders';
 import { Overview } from './overview';
 import { Reports } from './reports';
+import { Roles } from './roles';
+import { Users } from './users';
 
-const screens = { overview: Overview, orders: Orders, reports: Reports };
+const screens = { overview: Overview, orders: Orders, reports: Reports, users: Users, roles: Roles };
 
 export default function App() {
   const key = new URLSearchParams(location.search).get('screen') as keyof typeof screens | null;

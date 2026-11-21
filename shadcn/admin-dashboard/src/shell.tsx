@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react';
-import { BarChart3, Bell, Boxes, CalendarDays, ChevronDown, LayoutDashboard, Megaphone, Search, Settings, ShoppingCart, Users } from 'lucide-react';
-import { me, statusCounts, store } from '@/data';
+import { BarChart3, Bell, Boxes, CalendarDays, ChevronDown, LayoutDashboard, Megaphone, Search, Settings, ShieldCheck, ShoppingCart, UserCog, Users } from 'lucide-react';
+import { me, statusCounts, store, users } from '@/data';
 import { cn } from '@/lib/utils';
 
-export type Screen = 'overview' | 'orders' | 'reports';
+export type Screen = 'overview' | 'orders' | 'reports' | 'users' | 'roles';
 
 const nav = [
   { id: 'overview', label: 'Overview', icon: LayoutDashboard },
@@ -12,6 +12,11 @@ const nav = [
   { id: 'customers', label: 'Customers', icon: Users },
   { id: 'reports', label: 'Reports', icon: BarChart3 },
   { id: 'campaigns', label: 'Campaigns', icon: Megaphone },
+];
+
+const admin = [
+  { id: 'users', label: 'Users', icon: UserCog, count: users.length },
+  { id: 'roles', label: 'Roles & permissions', icon: ShieldCheck },
 ];
 
 /** 1440×1000 frame: a slim dark sidebar and a top bar with the date range. */
@@ -44,6 +49,23 @@ export function Shell({ active, title, actions, children }: { active: Screen; ti
               <Icon className={cn('size-[18px]', id === active && 'text-primary')} strokeWidth={1.8} />
               {label}
               {count !== undefined && <span className="num ml-auto rounded-md bg-accent px-1.5 text-[11px] text-accent-foreground">{count}</span>}
+            </div>
+          ))}
+        </nav>
+
+        <div className="mt-7 px-3 text-[11.5px] font-medium tracking-[0.06em] text-muted-foreground uppercase">Admin</div>
+        <nav className="mt-2 space-y-1">
+          {admin.map(({ id, label, icon: Icon, count }) => (
+            <div
+              key={id}
+              className={cn(
+                'flex h-10 items-center gap-3 rounded-[10px] px-3 text-[13.5px] font-medium',
+                id === active ? 'bg-sidebar-accent text-foreground' : 'text-sidebar-foreground/80',
+              )}
+            >
+              <Icon className={cn('size-[18px]', id === active && 'text-primary')} strokeWidth={1.8} />
+              {label}
+              {count !== undefined && <span className="num ml-auto text-[11.5px] text-muted-foreground">{count}</span>}
             </div>
           ))}
         </nav>
