@@ -86,6 +86,8 @@ export const totals = {
   hours: team.reduce((s, p) => s + p.hours, 0),
   capacity: team.reduce((s, p) => s + p.capacity, 0),
   onTrack: projects.filter((p) => p.health === 'On track').length,
+  atRisk: projects.filter((p) => p.health === 'At risk').length,
+  behind: projects.filter((p) => p.health === 'Behind').length,
 };
 
 export const deadlines = [

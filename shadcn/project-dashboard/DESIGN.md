@@ -9,7 +9,7 @@ A warm, friendly look for project management: bone paper, charcoal ink, one kiln
 | `--sidebar` | `oklch(0.94 0.01 78)` warm stone | The frame and sidebar around the content |
 | `--card` | `oklch(0.995 0.003 85)` | Cards (`.card-k`), table, task cards |
 | `--foreground` / `--primary` | `oklch(0.24 0.012 60)` charcoal | Text, the one dark "Needs attention" card, active tab underline |
-| `--kiln` | `oklch(0.57 0.17 42)` | Main action buttons (white text, 4.8:1), the today line, logo |
+| `--kiln` | `oklch(0.55 0.165 42)` | Main action buttons (white text, 5.2:1), the today line, logo |
 | `--kiln-ink` / `--accent-foreground` | darker orange | Orange text (today's date, counts, "At risk") |
 | `--ok` / `--risk` | green / red | "On track", "Behind", over-capacity hours, late tasks |
 | `--p-{clay,sky,lime,lilac,sand}` and `-ink` | soft fill + strong tone | One per project: timeline bars, project tiles, sidebar dots, progress bars. Text on a fill uses the matching `-ink` |
@@ -33,4 +33,4 @@ Every text color passes WCAG AA (4.5:1) on the surface it sits on.
 - Timeline: 12 weeks under month headers, three phase bars per project, a diamond and label for each launch, shaded studio holiday, the today line.
 
 ## Data
-Everything is read from `src/data.ts`; KPIs, progress, board counts and timeline dates are computed from the same arrays, so the screens agree (Halden: 34 of 52 tasks done, 9 + 5 + 4 open on the board, launch Dec 12 everywhere).
+Everything is read from `src/data.ts`. The KPIs (active projects and their status split, open tasks, due this week, team load) and each project's progress are computed from the arrays. The board's column counts (`boardCounts`) and each project's `due` date are set by hand in the same file, chosen to agree with the rest: Halden has 34 of 52 tasks done, so its board shows 9 + 5 + 4 open and 34 done, and its Dec 12 launch is the same on all three screens. Change them together.

@@ -49,7 +49,7 @@ export function Overview() {
         </div>
 
         <div className="mt-5 grid grid-cols-4 gap-4">
-          <Kpi label="Active projects" value={String(totals.active)} note={`${totals.onTrack} on track, 1 at risk, 1 behind`}>
+          <Kpi label="Active projects" value={String(totals.active)} note={`${totals.onTrack} on track, ${totals.atRisk} at risk, ${totals.behind} behind`}>
             <span className="flex gap-1">
               {projects.map((p) => (
                 <span key={p.id} className={cn('h-6 w-1.5 rounded-full', ink[p.color])} />
