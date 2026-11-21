@@ -29,7 +29,7 @@ Every text color passes WCAG AA (4.5:1) on the surface it sits on.
 - Home: full-bleed hero photo with the header overlaid, a giant headline and a three-field search bar; new listings; neighbourhood tiles with live counts; a valuation band with the agents; reviews.
 - Listing card: 4:3 photo with status pill and save heart, price in display type, address, area and agent, then beds, baths and square feet.
 - Listings page: filter pills, sort, a two-column list beside an illustrated map with price pins (the active one dark), and a saved-search tile.
-- Property detail page: five-photo mosaic, title and address, a fact strip, description, feature chips, a monthly cost estimate with a stacked bar, and a sticky booking card with day and time choices and the listing agent.
+- Property detail page: five-photo mosaic, title and address, a fact strip, description, feature chips, a monthly cost estimate with a stacked bar, and a booking card with day and time choices and the listing agent.
 - Agent profile: large portrait, name, bio, areas, a stat strip, contact buttons, the agent's listings and reviews.
 
 ## Data and images

@@ -25,7 +25,7 @@ function MapPanel({ active }: { active: string }) {
         { name: 'Shoreline', x: 16, y: 72 },
         { name: 'Southridge', x: 78, y: 66 },
       ].map((a) => (
-        <span key={a.name} className="absolute text-[12px] font-semibold tracking-[0.06em] text-foreground/45 uppercase" style={{ left: `${a.x}%`, top: `${a.y}%` }}>
+        <span key={a.name} className="absolute text-[12px] font-semibold tracking-[0.06em] text-muted-foreground uppercase" style={{ left: `${a.x}%`, top: `${a.y}%` }}>
           {a.name}
         </span>
       ))}
