@@ -49,4 +49,5 @@ React, shadcn/ui and Tailwind CSS v4, each with a DESIGN.md:
 | Fernwise finance dashboard | Web app, dashboard | [shadcn/finance-dashboard](shadcn/finance-dashboard) |
 | Tideline CRM dashboard | Web app, 3 screens | [shadcn/crm-dashboard](shadcn/crm-dashboard) |
 | Kiln project management dashboard | Web app, 3 screens | [shadcn/project-dashboard](shadcn/project-dashboard) |
+| Morrow e-commerce website | Website, 4 pages | [shadcn/ecommerce](shadcn/ecommerce) |
 | Fernwise finance app | Mobile app, 6 screens | [shadcn/finance](shadcn/finance) |
