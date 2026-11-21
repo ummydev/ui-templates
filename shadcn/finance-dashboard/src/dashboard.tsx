@@ -43,6 +43,7 @@ const split = [
   { name: 'Groceries', value: 386, color: 'var(--chart-2)' },
   { name: 'Eating out', value: 212, color: 'var(--chart-4)' },
   { name: 'Transport', value: 92, color: 'var(--chart-3)' },
+  { name: 'Everything else', value: 1840, color: 'var(--chart-5)' },
 ];
 
 const accounts = [
@@ -204,7 +205,7 @@ export function Dashboard() {
                 </PieChart>
               </ChartContainer>
               <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <span className="num text-[22px] font-light">$2,140</span>
+                <span className="num text-[22px] font-light">$3,980</span>
                 <span className="text-[11.5px] text-muted-foreground">spent</span>
               </div>
             </div>
@@ -221,6 +222,11 @@ export function Dashboard() {
                   </div>
                 );
               })}
+              <div className="flex items-center gap-3 text-[13.5px]">
+                <i className="size-2.5 rounded-full bg-chart-5 ring-1 ring-border" />
+                <span className="flex-1">Everything else</span>
+                <span className="num text-muted-foreground">$1,840</span>
+              </div>
             </div>
           </Panel>
         </div>
