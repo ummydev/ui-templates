@@ -39,3 +39,12 @@ Watch or star the repository to hear when new templates land.
 ## License
 
 MIT.
+
+## shadcn/ui templates
+
+React, shadcn/ui and Tailwind CSS v4, each with a DESIGN.md:
+
+| Template | Type | Folder |
+| --- | --- | --- |
+| Fernwise finance dashboard | Web app, dashboard | [shadcn/finance-dashboard](shadcn/finance-dashboard) |
+| Fernwise finance app | Mobile app, 6 screens | [shadcn/finance](shadcn/finance) |
