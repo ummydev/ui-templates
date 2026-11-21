@@ -1,5 +1,7 @@
 # Morrow: e-commerce website template (shadcn/ui + Tailwind)
 
+Live preview and details: [codexdesign.io/templates/ecommerce-website](https://codexdesign.io/templates/ecommerce-website)
+
 A storefront for a small handmade ceramics shop, with four pages: a home page, a shop page with filters, a product page and the cart. Built with React, shadcn/ui, Tailwind CSS v4 and Lucide icons. The design system is in [DESIGN.md](DESIGN.md) and the theme tokens in `src/index.css`.
 
 ![Home page](screenshots/home.png)
