@@ -55,8 +55,8 @@ export const countries = [
   { name: 'Canada', code: 'CA', share: 0.17 },
   { name: 'United Kingdom', code: 'GB', share: 0.12 },
   { name: 'Germany', code: 'DE', share: 0.1 },
-  { name: 'Australia', code: 'AU', share: 0.075 },
-  { name: 'Other', code: '··', share: 0.075 },
+  { name: 'Australia', code: 'AU', share: 0.072 },
+  { name: 'Other', code: '··', share: 0.078 },
 ].map((c, i, all) => ({
   ...c,
   // Visitors per country; "Other" takes the rounding remainder so the list adds up to the total.
